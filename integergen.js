@@ -10,11 +10,14 @@
 // integerGen ( 257 ) ;
 
 var xs = new Array();
-function integerGen ( x, n ) {
-  if ( x == n ) { return xs }
-  else { xs.push(x+1); }
+function integerGen ( start, end ) {
+  if ( start == end ) { return xs }
+  else { xs.push(start + 1);
+//  console.log(start);
+  }
 
-return integerGen(x + 1, n);
+return integerGen(start + 1, end);
 }
 console.log(integerGen (-10, 10));
+//integerGen (0, 16000);
 
