@@ -11,6 +11,7 @@ return go( xs, y, false )
 console.log(elem([1,2,3], 3));
 console.log(elem([1,2,3], 2));
 console.log(elem([1,2,3], 4));
+console.log(elem([1,2,3,4,5,34,62,43,32,5,3,4, 99], 99));
 
 
 
