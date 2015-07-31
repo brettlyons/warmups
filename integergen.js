@@ -12,12 +12,10 @@
 var xs = new Array();
 function integerGen ( start, end ) {
   if ( start == end ) { return xs }
-  else { xs.push(start + 1);
+  xs.push(start + 1);
 //  console.log(start);
-  }
-
 return integerGen(start + 1, end);
 }
 console.log(integerGen (-10, 10));
-//integerGen (0, 16000);
+console.log(integerGen (0, 15700));
 

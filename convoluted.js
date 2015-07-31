@@ -6,12 +6,15 @@ function convoluted( string ) {
     }
   return output;
   }
-return repeatChrAndIndex;
+return repeatChrAndIndex; // <-- look ma, no parenthesis!
 }
+
 var thisOldString = convoluted( 'This Old String' );
 var withBobVilla = convoluted( 'And Norms New Yankee Workshop' );
+
 console.log(thisOldString('a'));
 console.log(withBobVilla('a'));
+
 console.log(thisOldString('b'));
 console.log(withBobVilla('b'));
 
