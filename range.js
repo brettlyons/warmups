@@ -1,4 +1,4 @@
-//function integerGen ( n ) {
+//function range ( n ) {
 //  function go( x, xs,  n ) {
  //   if ( x == n ) { return xs; }
 //    console.log(x + " " + xs + " " + n);
@@ -7,15 +7,17 @@
 //  }
 //return go( 0 , [], n );
 //}
-// integerGen ( 257 ) ;
+// range ( 257 ) ;
 
 var xs = new Array();
-function integerGen ( start, end ) {
+function range ( start, end ) {
   if ( start == end ) { return xs }
   xs.push(start + 1);
 //  console.log(start);
-return integerGen(start + 1, end);
+return range(start + 1, end);
 }
-console.log(integerGen (-10, 10));
-console.log(integerGen (0, 15700));
+
+console.log(range ( 5, 15));
+console.log(range (-10, 10));
+//console.log(range (0, 15700));
 
