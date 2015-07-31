@@ -1,16 +1,31 @@
-// A String is a primitive data type, although it sometimes
-// acts like a reference data type.
-//
-// A Number is a primitive datatype.
-//
-// An array is a reference datatype that contains many variables
-// (Of varying types)
-//
-// A method is a function declared as a property of an object
-// A function exists without association with any particular
-// object, and can be declared within another function.
-// functions can be thought of as a datatype
-// in that they can be passed to other functions, or returned
-// and the typeof foo (){}; returns that the type is a Function.
-//
+//1.) the 'this' keyword refers to a property
+//within an object from a method within that obj.
 
+
+//function reverseEachElement ( arrOfStrings ) {
+  //var output = [];
+  //var ntmpString = '';
+  //for ( var i = arrOfStrings.length-1 ; i >= 0 ; i--) {
+    //for ( var j = arrOfStrings[i].length-1 ; j >= 0 ; j--) {
+      //ntmpString += arrOfStrings[i][j];
+    //}
+  //output.push(ntmpString);
+  //ntmpString = '';
+  //}
+//return output;
+//};
+
+//console.log(reverseEachElement ( [ 'cat', 'dog', 'horse' ] ));
+//console.log(reverseEachElement ( [ 'rocky mountain goat' ] ));
+
+
+function averagePairs ( inArr ) {
+  var output = [];
+  for ( var i = 1 ; i < inArr.length ; i++ ) {
+    output.push((inArr[i-1] + inArr[i])/2);
+  }
+return output;
+};
+console.log(averagePairs([2, 6, 5, 5, 5]));
+console.log(averagePairs([2,6,8,3,3]));
+console.log(averagePairs([1,2,3,4,5]));
