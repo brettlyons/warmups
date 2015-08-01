@@ -4,8 +4,8 @@ var elem = function( xs, y ){
 //    console.log(xs + " " + y + " " + output + " " + xs[0] + " " + (xs[0] == y));
 
     if (xs.length == 0 || output == true ) { return output; }
-    return go(xs.slice(1), y, (xs[0] == y));
-      }
+  return go(xs.slice(1), y, (xs[0] == y));
+  }
 return go( xs, y, false )
 }
 console.log(elem([1,2,3], 3));
