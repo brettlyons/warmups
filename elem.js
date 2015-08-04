@@ -1,17 +1,24 @@
 var include = function ( array, target ) {
   for ( idx in array ) {
-    if ( array[idx] === target ) { return true; }
+    if ( typeof ( array[idx] ) == typeof ( target ) ) {
+      for ( jdx in target ) {
+        if ( target[jdx] == array[idx][jdx] ) { return true };
+      }
+    }
+  if (array[idx] === target ) { return true; }
   }
 return false;
 }
 
+
+
 var a = [1,2,3,4,5];
-console.log( include( a, 3 )); //true
-console.log( include( a, 7 )); //false
-console.log( include( a, "3")); //false
-console.log( include( a, {a: 1})); //false
-
-
+var b = [1, [2, 3]];
+console.log("true ?>> " + include( a, 3 )); //true
+console.log("false ?>> " + include( a, 7 )); //false
+console.log("false ?>> " + include( a, "3")); //false
+console.log("false ?>> " +  include( a, {a: 1})); //false
+console.log("true ?>> " +  include( b, [2, 3])); //true ?
 
 
 /*
