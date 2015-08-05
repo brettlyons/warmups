@@ -18,6 +18,8 @@ function positionOfSubstring( inString, target ) {
 return pos;
 }
 
+// note on this test case -- it catches a particular edge case
+// because the t's align on the index.
 
 console.log(positionOfSubstring( 'This string', 'is'));
 console.log(positionOfSubstring( 'this string', 'isn\'t'));
