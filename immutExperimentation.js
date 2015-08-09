@@ -6,11 +6,11 @@ console.log(map2.get('b'));
 console.log(map1.get('b'));
 
 console.log (
-  Immutable.Range(1, Infinity)
-  .skip(1000)
-  .map(function ( n ) { return  -n; })
-  .filter(function ( n ) {return n % 2 === 0} )
-  .take(2)
+  Immutable.Range(100, 1)
+//  .skip(00)
+//  .map(function ( n ) { return  -n; })
+//  .filter(function ( n ) {return n % 2 === 0} )
+//  .take(2)
   .reduce(function (r, n) {return r * n}, 1)
   );
 
