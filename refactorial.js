@@ -1,13 +1,13 @@
 var factorial = function( n ) {
   if ( n == 0 || n == 1 ) { return 1; }
   function go( n, accum ) {
-    console.log(n + " " + accum);
     if (n == 1) { return accum; }
   return go( n - 1, accum * n );
   }
 return go( n-1, n );
 }
 
+console.log(factorial ( 100 ));
 factorial (171);
 
 //I read a post on stackoverflow about tail-recursion in JS
