@@ -177,9 +177,6 @@ console.log(countriesOfOver60(people)); // this logs an Array for # 2
 
 // 3. Produce an object that contains a count of people by country, it would look like:
 // {"United States": X, "Canada": Y, etc...}
-var sum = function ( x, y ) {
-  return x + y;
-}
 
 var countOfPeopleByCountry = function ( people ) {
   var numUK =  people.map(countryConvert).filter(isFromEngland).length;
