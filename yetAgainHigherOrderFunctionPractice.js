@@ -179,7 +179,7 @@ console.log(countriesOfOver60(people)); // this logs an Array for # 2
 // {"United States": X, "Canada": Y, etc...}
 
 var countOfPeopleByCountry = function ( people ) {
-  var numUK =  people.map(countryConvert).filter(isFromEngland).length;
+  var numUK = people.map(countryConvert).filter(isFromEngland).length;
   var numIRL = people.map(countryConvert).filter(isFromIRL).length;
   var numUS = people.map(countryConvert).filter(isFromUS).length;
   var numCAN = people.map(countryConvert).filter(isFromCanada).length;
