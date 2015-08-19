@@ -1,0 +1,39 @@
+1.) What is Function.prototype.call?
+  A function that calls a function in the specific context of an different
+  object, specified by the usage of "this" in the call method.  The function
+  accepts as many arguments as the function being called.
+  It can be used to borrow the constructors from other objects, and thus
+  inherit some of their properties.
+
+2. )  function ( param1, param2 ) {
+    // doStuff;
+  }.call(this, arg1, arg2);
+
+3. ) What is Function.prototype.apply?
+  The same thing as Function.prototype.call except that the argument list is
+  passed as an array instead of as a specific quantity of arguments.
+
+  4. ) function ( param3, param4 ) {
+  // doStuff;
+  }.apply(this, arrayOfArguments )
+
+  5. ) prototype.apply and prototype.call are useful in different contexts,
+  depending on whether one knows beforehand how many arguments are being passed
+  into the function/constructor.
+
+  6.)
+  function MyConstructor ( construcParam1, construcParam2 ) {
+    this.objThing = construcParam1;
+    this.objThing2 = construcParam2;
+
+    this.construcMethod = function ( stuff ) {
+      for (eachThing in stuff) {
+        console.log( stuff[eachThing] );
+      }
+    }
+  }
+
+  function MyOtherConstructor ( construcParam3 ) {
+    this.objThing3 = construcParam3;
+  }
+  var myOtherObjectInitialized = MyOtherConstructor.prototype.call(this, arg1, arg2 );
