@@ -9,7 +9,6 @@ var fjs = require('functional.js');
     //}, arrOfStrings[0] );
 //}
 
-
 //function subtractString( string ) {
   //var difference = 0;
   //var partition = 0;
