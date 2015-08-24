@@ -1,32 +1,32 @@
 var fjs = require('functional.js');
 //takes a string of arithmitic and returns the correct result
 
-//function subtractString ( string ) {
+//function subtractstring ( string ) {
 //  new versions of this function will take operation as a function
-  //var arrOfStrings = string.split('-');
-    //return arrOfStrings.slice(1).reduce( function ( total, element ) {
-      //return total -= Number(element);
-    //}, arrOfStrings[0] );
+  //var arrofstrings = string.split('-');
+    //return arrofstrings.slice(1).reduce( function ( total, element ) {
+      //return total -= number(element);
+    //}, arrofstrings[0] );
 //}
 
-//function subtractString( string ) {
+//function subtractstring( string ) {
   //var difference = 0;
   //var partition = 0;
   //for( var i = 0 ; i < string.length ; i++ ) {
     //if ( string[i] == "-") {
-      //difference -= Number(string.substring(partition, i));
+      //difference -= number(string.substring(partition, i));
       //partition = i+1;
     //}
     //if( i == string.length - 1 ) {
-      //difference -= Number(string.substring(partition, string.length));
+      //difference -= number(string.substring(partition, string.length));
     //}
   //}
   //return difference;
 //};
-//console.log(subtractString("3-5-7")); //
-//console.log(subtractString("20-7-3")); //
-//console.log(subtractString("235-8472-2")); //
-//console.log(subtractString('10-20-30')); // -40
+//console.log(subtractstring("3-5-7")); //
+//console.log(subtractstring("20-7-3")); //
+//console.log(subtractstring("235-8472-2")); //
+//console.log(subtractstring('10-20-30')); // -40
 
 //function addString ( string ) {
   //var sum = 0;
