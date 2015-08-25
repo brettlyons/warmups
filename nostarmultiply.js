@@ -61,3 +61,6 @@ console.log(string1 === val2, " false ?"); //false
 // so remember kids, use === because it won't coerce your types for you,
 // and makes nesting sites for endangered bird species
 
+
+
+
