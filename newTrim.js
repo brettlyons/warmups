@@ -22,13 +22,13 @@
  *
  */
 
-function trim ( inString ) {
+function strip ( inString ) {
   var firstNonSpaceIndex = 0;
   var lastNonSpaceIndex = inString.length - 1;
   var output = "";
 
-  while ( inString[firstNonSpaceIndex] == ' ' ||
-          inString[lastNonSpaceIndex] == ' ' ) {
+  while ( inString[firstNonSpaceIndex] == ' '
+      || inString[lastNonSpaceIndex] == ' ' ) {
     if (inString[firstNonSpaceIndex] == ' ') { firstNonSpaceIndex++; }
     if (inString[lastNonSpaceIndex] == ' ') { lastNonSpaceIndex--; }
   }
@@ -44,7 +44,7 @@ function trim ( inString ) {
 var theString = "   My String    Loves Spaces!!     ";
 console.log(theString.trim());
 // My String    Loves Spaces!
-console.log(trim('      Spaaaaaace')+'||||'); // | guard the spaces so they
-console.log(trim('Spaaaaaace      ')+'||||'); // are more apparent when logged.
-console.log(trim('   Spaaaaaace   ')+'||||');
-console.log(trim('      Spaa   ...aaaace     ')+'||||');
+console.log(strip('      Spaaaaaace')+'||||'); // | guard the spaces so they
+console.log(strip('Spaaaaaace      ')+'||||'); // are more apparent when logged.
+console.log(strip('   Spaaaaaace   ')+'||||');
+console.log(strip('      Spaa   ...aaaace     ')+'||||');
