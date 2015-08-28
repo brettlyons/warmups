@@ -10,7 +10,7 @@ function rotateEvenIndices ( inString ) {
   stackOfChars.push(stackOfChars.shift()); // puts 0th element onto the end
 
   for ( var i = 0 ; i < inString.length ; i++ ) {
-    ( i % 2 == 0 ) ? output +=  stackOfChars.pop() : output += inString[i];
+    output += ( i % 2 == 0 ) ? stackOfChars.pop() : inString[i];
   }
   return output;
 }
