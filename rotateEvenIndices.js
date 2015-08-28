@@ -3,9 +3,7 @@ function rotateEvenIndices ( inString ) {
   var stackOfChars = [];
   var output = "";
   for ( var i = 0 ; i < inString.length ; i++ ) {
-    if ( i % 2 == 0 ) {
-      stackOfChars.unshift(inString[i]);
-    }
+    if ( i % 2 == 0 ) { stackOfChars.unshift(inString[i]); }
   }
   stackOfChars.push(stackOfChars.shift()); // puts 0th element onto the end
 
@@ -25,5 +23,5 @@ var rotatedTwice = rotateEvenIndices(rotatedOnce);
 console.log(rotatedTwice);
 
 var backToOriginal = rotateEvenIndices(rotatedTwice);
-console.log(string === backToOriginal); // true
+console.log("true ?: "string === backToOriginal); // true
 console.log(backToOriginal);
