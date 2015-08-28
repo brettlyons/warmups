@@ -23,5 +23,5 @@ var rotatedTwice = rotateEvenIndices(rotatedOnce);
 console.log(rotatedTwice);
 
 var backToOriginal = rotateEvenIndices(rotatedTwice);
-console.log("true ?: "string === backToOriginal); // true
+console.log(string === backToOriginal); // true
 console.log(backToOriginal);
