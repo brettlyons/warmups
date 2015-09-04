@@ -13,7 +13,18 @@ function CowFarm(cows) {
     }
   return output.slice(0, -1); // gotta slice off the extra \n
   }
+  //this.mooInOrderRec = function() {
+    //function go(cows)  {
+      //if (cows.length === 0) {
+        //return null;
+      //}
+      //cows[0].moo() + "\n"
+      //return go(cows.slice(1));
+    //}
+    //return go(cows);
+  //}
 }
+
 
 //1. construct cows that can moo
 var bessy = new Cow("Bessy", 10);
