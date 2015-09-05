@@ -1,5 +1,5 @@
 function palindrome (string) {
-  var spaceLessStr = string.replace(/\s/g, "");
+  var spaceLessStr = string.replace(/\W/g, "");
   function go(letterArr, letterStack) {
     if (letterArr.length === 0) { return spaceLessStr === letterStack.join(''); }
 
