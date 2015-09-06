@@ -1,4 +1,4 @@
-function palindrome(string) { // also handles 'odd' palindromes
+function palindrome(string) {
   var sanitizedArray = string.replace(/\W/g, "").split('');
 
   function isPalindrome(arrayOfChrs) {
@@ -11,7 +11,7 @@ function palindrome(string) { // also handles 'odd' palindromes
       //: (arrayOfChrs.pop() != arrayOfChrs.shift()) ? false
       //: isPalindrome(arrayOfChrs);
 
-    return (arrayOfChrs.length <= 1) || ((arrayOfChrs.pop() === arrayOfChrs.shift()) && isPalindrome(arrayOfChrs));
+    return (arrayOfChrs.length <= 1) || (arrayOfChrs.pop() === arrayOfChrs.shift() && isPalindrome(arrayOfChrs));
   }
 
   return isPalindrome(sanitizedArray);
