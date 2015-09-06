@@ -1,39 +1,26 @@
-// the spec is as such:
-// given two strings,
-// find the longest substring they both share.
-//
-// so the return for "verbing" and "dingaling" would be "ing"
-// the return for "coding" and "odd" would be "od"
+//given two strings, write a function, maxSubstring, that returns the longest substring that occurs in both strings.
 
-// first: detect matching substring
-// then : push matching substring into collection variable
-// if it is longer than the previous contents of the collection variable.
+function maxSubstring(string1, string2) {
+  var longestString = (string1.length >= string2.length) ? string1 : string2;
+  var shortestString = (string1.length < string2.length) ? string1 : string2;
+  var tmpSubstring;
+  var outputString = '';
 
-:let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+  for(var i = 0 ; i < shortestString.length ; i++) {
+    for(var j = 1 ; j < shortestString.length ; j++ ) {
+    tmpSubstring = shortestString.substring(i, j+1);
+      if (longestString.indexOf(tmpSubstring) != -1
+          && tmpSubstring.length > outputString.length) {
 
-
-
-function longestSubString(string1, string2) {
-  var output = [];
-  var k = 0;
-  for(var i = 0 ; i < longest(string1, string2).length; i++) {
-    tmpOutput = []
-    for(var j = 0 ; j < longest(string1, string2).length; j++) {
-      if(string1[i] == string2[j]) {
-        console.log("IF ENTERED");
-        tmpOutput.push(string1[i]);
+          outputString = tmpSubstring;
       }
     }
-  output.push(tmpOutput);
   }
-  console.log(output);
-  //return output.reduce(function (accum, current) {
-    //return longest(accum, current);
-  //});
-
-  function longest(str1, str2) {
-    return (str1.length > str2.length) ? str1 : str2;
-  }
+  return outputString;
 }
 
-console.log(longestSubString("coding", "roading")); // ding
+console.log(maxSubstring("green", "agreed")); // gree
+console.log(maxSubstring("odiferous", "ferrous acid")) // rous
+console.log(maxSubstring("camp counselor", "crow")) // r
+console.log(maxSubstring("javascript", "java")) // java
+console.log(maxSubstring("Gerbils", "Mad Max")) // empty string
