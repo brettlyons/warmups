@@ -12,4 +12,4 @@ function palindrome (string) {
 
 console.log("true ?", palindrome("step on no pets")); // true
 console.log("false ?", palindrome("herpderp")); // false
-console.log("true ? ", palindrome('a man a plan a canal panama'));
+console.log("true ? ", palindrome('a man, a plan, a canal; panama'));
