@@ -1,13 +1,13 @@
 function palindrome (string) {
   var spaceLessStr = string.replace(/\W/g, "");
-  function go(letterArr, letterStack) {
+  function reverse(letterArr, letterStack) {
     if (letterArr.length === 0) { return spaceLessStr === letterStack.join(''); }
 
     letterStack.push(letterArr.pop());
-    return go(letterArr, letterStack)
+    return reverse(letterArr, letterStack)
   }
 
-  return go(spaceLessStr.split(''), []);
+  return reverse(spaceLessStr.split(''), []);
 }
 
 console.log("true ?", palindrome("step on no pets")); // true
