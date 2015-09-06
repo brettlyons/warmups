@@ -7,9 +7,11 @@ function palindrome(string) { // also handles 'odd' palindromes
 
     //return isPalindrome(arrayOfChrs);
 
-    return (arrayOfChrs.length <= 1) ? true
-      : (arrayOfChrs.pop() != arrayOfChrs.shift()) ? false
-      : isPalindrome(arrayOfChrs);
+    //return (arrayOfChrs.length <= 1) ? true
+      //: (arrayOfChrs.pop() != arrayOfChrs.shift()) ? false
+      //: isPalindrome(arrayOfChrs);
+
+    return (arrayOfChrs.length <= 1) || ((arrayOfChrs.pop() === arrayOfChrs.shift()) && isPalindrome(arrayOfChrs));
   }
 
   return isPalindrome(sanitizedArray);
