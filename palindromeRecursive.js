@@ -1,10 +1,10 @@
 function palindrome(string) {
   var sanitizedArray = string.replace(/\W/g, "").split('');
 
-  function isPalindrome(arrayOfChrs) {
-    return (arrayOfChrs.length <= 1)
-      || (arrayOfChrs.pop() === arrayOfChrs.shift()
-          && isPalindrome(arrayOfChrs));
+  function isPalindrome(arrayOfChars) {
+    return (arrayOfChars.length <= 1)
+      || (arrayOfChars.pop() === arrayOfChars.shift()
+          && isPalindrome(arrayOfChars));
   }
 
   return isPalindrome(sanitizedArray);
