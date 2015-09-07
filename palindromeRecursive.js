@@ -6,7 +6,6 @@ function palindrome(string) {
       || (arrayOfChars.pop() === arrayOfChars.shift()
           && isPalindrome(arrayOfChars));
   }
-
   return isPalindrome(sanitizedArray);
 }
 
