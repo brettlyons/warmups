@@ -66,6 +66,11 @@ console.log(myFreshList.reverse());
 console.log("oOOoo", myFreshList)  // it used to eat the list!
 
 LinkedList.prototype.insertAtIndex = function(node, index) {
+  if ( index == 0 ) {
+    node.next = this.head.next;
+    this.head = node;
+    return;
+  }
   var currentNode = this.head;
   function go(counter, currNode) {
     if(counter == index) {
@@ -73,12 +78,13 @@ LinkedList.prototype.insertAtIndex = function(node, index) {
       currNode.next = node;
       return;
     }
+    currNode = currNode.next;
     return go(counter+1, currNode.next)
   }
   return go(0, currentNode);
 
 }
 var kazerp = new Node("Nonth", null)
-myFreshList.insertAtIndex(kazerp, 1); // if you want to replace the head, use push();
+myFreshList.insertAtIndex(kazerp, 1);
 console.log("....", myFreshList);
-
+// maybe try "removing the element at the kth index"
