@@ -18,6 +18,7 @@ function maxSubstring(string1, string2) {
   return outputString;
 }
 
+console.log(maxSubstring("texas", "example")); //exa
 console.log(maxSubstring("green", "agreed")); // gree
 console.log(maxSubstring("odiferous", "ferrous acid")); // rous
 console.log(maxSubstring("camp counselor", "crow")); // o

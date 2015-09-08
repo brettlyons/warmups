@@ -1,8 +1,5 @@
-
-
-
 function palindrome(string) {
-  var sanitizedArray = string.replace(/\W/g, "").split('');
+  var sanitizedArray = string.replace(/\W/g, "").toLowerCase().split('');
 
   function isPalindrome(arrayOfChars) {
     return (arrayOfChars.length <= 1)
