@@ -11,8 +11,7 @@ function maxSubstring(string1, string2) {
     tmpSubstring = shortestString.substring(i, j+1);
       if (longestString.indexOf(tmpSubstring) != -1
           && tmpSubstring.length >= outputString.length) {
-
-          outputString = tmpSubstring;
+            outputString = tmpSubstring;
       }
     }
   }
@@ -21,7 +20,7 @@ function maxSubstring(string1, string2) {
 
 console.log(maxSubstring("green", "agreed")); // gree
 console.log(maxSubstring("odiferous", "ferrous acid")); // rous
-console.log(maxSubstring("camp counselor", "crow")); // r
+console.log(maxSubstring("camp counselor", "crow")); // o
 console.log(maxSubstring("javascript", "java")); // java
 console.log(maxSubstring("clojurescript", "javascript")); // script
-console.log(maxSubstring("Gerbils", "Mad Max")); // empty string
+console.log(maxSubstring("Flying Gerbils", "Mad Max")); // empty string
