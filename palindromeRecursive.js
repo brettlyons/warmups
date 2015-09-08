@@ -1,3 +1,6 @@
+
+
+
 function palindrome(string) {
   var sanitizedArray = string.replace(/\W/g, "").split('');
 
