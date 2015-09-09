@@ -1,21 +1,14 @@
 function collatzRecursive( n ) {
-  var output = '';
-  function go( n ) {
+  function go( n, output ) {
     if (n === 1) {
-      output += " -> " + n;
+      output += n;
       return output;
     }
-    if (n % 2 === 0 ) {
-      output += " -> " + n;
-      return go(n / 2);
-    }
-    if (n % 2 === 1) {
-      output += " -> " + n;
-      return go(3*n +1);
-    }
+    output += n + " -> ";
+    return go(n % 2 == 0 ? (n/2) : (3*n + 1), output);
   }
-  return go( n );
+  return go( n, "" );
 }
 
-console.log(collatzRecursive(13));
+console.log(collatzRecursive(13), "\n");
 console.log(collatzRecursive(252));
