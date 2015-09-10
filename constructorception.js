@@ -1,15 +1,15 @@
-function Constructor ( param  ) {
+function Constructor(param) {
   var that = this;
   return {
-    Constructor : function ( param  ) {
+    Constructor: function(param) {
       return {
-        Constructor: function ( param  ) {
-          console.log("I heard your encapsulation liked encapsulation, so I added some constructors to your constructors...",  param);
+        Constructor: function(param) {
+          console.log('I heard your encapsulation liked encapsulation, so I added some constructors to your constructors...',  param);
 
-        }
+        },
 
       }
-    }
+    },
   }
 
 }

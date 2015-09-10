@@ -1,4 +1,4 @@
-function Person ( name, title, evil, enemyOfKing ) {
+function Person(name, title, evil, enemyOfKing) {
   this.name = String(name);
   this.title = String(title);
   this.evil = Boolean(evil);
@@ -7,55 +7,54 @@ function Person ( name, title, evil, enemyOfKing ) {
   var that = this;
 
   return {
-    getName: function (  ) {
+    getName: function() {
       return that.name;
     },
-    getTitle: function (  ) {
+    getTitle: function() {
       return that.title;
     },
-    setTitle: function ( newTitle  ) {
+    setTitle: function(newTitle) {
       that.title = newTitle;
     },
-    getEvil: function (  ) {
+    getEvil: function() {
       return that.evil;
     },
-    setEvil: function ( newEvil ) {
+    setEvil: function(newEvil) {
       that.evil = newEvil;
     },
-    getEnemyofKing: function (  ) {
+    getEnemyofKing: function() {
       return that.enemyOfKing;
     },
-    setEnemyofKing: function ( newEoKStatus ) {
+    setEnemyofKing: function(newEoKStatus) {
       that.enemyOfKing = newEoKStatus;
-    }
+    },
   };
 }
 
-var myself = new Person( "brett", "Unknown", false, false );
-var otherperson = new Person ( "XYZ", "ThisTitle", true, false );
-var joker = new Person("The Joker", "Joker", true, true);
+var myself = new Person('brett', 'Unknown', false, false);
+var otherperson = new Person ('XYZ', 'ThisTitle', true, false);
+var joker = new Person('The Joker', 'Joker', true, true);
 //console.log(myself);
 
-function Castle ( ) {
+function Castle() {
   this.people = [];
   var that = this;
   return {
-    getPeople: function (  ) {
+    getPeople: function() {
       return that.people;
     },
 
-    addPerson: function ( person ) {
-      if ( person.getEnemyofKing() == false ) {
+    addPerson: function(person) {
+      if (person.getEnemyofKing() == false) {
         that.people.push(person);
-      }
-      else {
-        console.log("Could not put person into castle.");
+      } else {
+        console.log('Could not put person into castle.');
       }
     },
 
-    rmPerson: function ( person ) {
+    rmPerson: function(person) {
       that.people.pop(person);
-    }
+    },
   }
 }
 

@@ -12,10 +12,10 @@
  *
  */
 
-var zip = function ( xs, ys ) {
+var zip = function(xs, ys) {
   var output = [];
   var bound = xs.length > ys.length ? xs.length : ys.length;
-  for ( var i = 0 ; i < bound ; i++ ) {
+  for (var i = 0 ; i < bound ; i++) {
     output.push(xs[i]);
     output.push(ys[i]);
   }

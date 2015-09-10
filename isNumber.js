@@ -14,10 +14,10 @@
  *};
  *
  */
-console.log( isNumber ( 3.41)); //true
-console.log( isNumber ( 4 )) ;  //true
-console.log ( isNumber (333-4)); //true
-console.log ( isNumber ("7829x9")); //false
+console.log(isNumber (3.41)); //true
+console.log(isNumber (4)) ;  //true
+console.log (isNumber (333 - 4)); //true
+console.log (isNumber ('7829x9')); //false
 /*
  *
  *function isNumberTwo( input ) {
@@ -34,7 +34,7 @@ console.log ( isNumber ("7829x9")); //false
  *
  */
 
-function isNumber(str){
+function isNumber(str) {
   noDash = str.replace(/-/g, '');
-return (Number(noDash) > -1)
+  return (Number(noDash) > -1)
 }

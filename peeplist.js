@@ -1,6 +1,6 @@
-var peopleList = ["Andrew", "Andreas", "Emily"];
+var peopleList = ['Andrew', 'Andreas', 'Emily'];
 people = []
-for ( var i = 0 ; i < peopleList.length ; i++ ) {
+for (var i = 0 ; i < peopleList.length ; i++) {
   people.push({id: i, name: peopleList[i]});
 }
 console.log(people[0]);

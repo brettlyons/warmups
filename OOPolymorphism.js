@@ -5,7 +5,11 @@ function Bicycle(wheelSize, color) {
 }
 
 Bicycle.prototype.toString = function() {
-  return 'This sweet ' + this.color + ' bicycle has an awesome ' + this.wheelSize + ' wheelset.';
+  return 'This sweet '
+    + this.color
+    + ' bicycle has an awesome '
+    + this.wheelSize
+    + ' wheelset.';
 
 };
 
@@ -15,11 +19,13 @@ Bicycle.prototype.takeForRide = function() {
 }
 
 Bicycle.prototype.validateWheelSize = function(wheelSize) {
-  if (this.validWheelSizes.indexOf(wheelSize) == -1) throw 'Wheelsize for road bikes must be one of ' + this.validWheelSizes.join(', ');
-
+  if (this.validWheelSizes.indexOf(wheelSize) == -1) {
+    throw 'Wheelsize for road bikes must be one of '
+      + this.validWheelSizes.join(', ');
+  }
 };
 
-function BMXBike ( wheelSize, color ) {
+function BMXBike(wheelSize, color) {
   this.validWheelSizes = ['16', '20'];
   this.validateWheelSizes(wheelSize);
   this.wheelSize = wheelSize;

@@ -14,7 +14,7 @@ var intersection = function(arrayOne, arrayTwo) {
   if (!arrayOne || !arrayTwo) { return output; }
 
   for (var i = 0 ; i < arrayOne.length ; i++) {
-    for (var j = 0 ; j < arrayTwo.length ; j++){
+    for (var j = 0 ; j < arrayTwo.length ; j++) {
       if (isMatch(arrayOne[i], arrayTwo[j])) {
         output.push(arrayOne[i]);
         break;
@@ -27,14 +27,14 @@ var intersection = function(arrayOne, arrayTwo) {
 
 
 //var recursiveIntersection = function(arrayOne, arrayTwo) {
-  //var output = [];
-  //function go ( goArrayOne, goArrayTwo ) {
-    //if (!goArrayOne || !goArrayTwo) {
-      //return output;
-    //}
-    //else output.push(go(goArrayOne, goArrayTwo.slice(1))
-    //}
-  //return go(arrayOne.slice(1), arrayTwo)
+//var output = [];
+//function go ( goArrayOne, goArrayTwo ) {
+//if (!goArrayOne || !goArrayTwo) {
+//return output;
+//}
+//else output.push(go(goArrayOne, goArrayTwo.slice(1))
+//}
+//return go(arrayOne.slice(1), arrayTwo)
 //}
 
 
@@ -48,8 +48,8 @@ console.log(intersection(test1, test3)); // []
 console.log(intersection(test2, test3)); // []
 
 function allCharsUnique(string) {
-  for(var i = 0 ; i < string.length ; i++) {
-    for(var j = i ; j < string.length ; j++) {
+  for (var i = 0 ; i < string.length ; i++) {
+    for (var j = i ; j < string.length ; j++) {
       if (string[i] == string[j]) {
         return false;
       }

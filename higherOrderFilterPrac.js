@@ -20,9 +20,9 @@
 var foxTypes = ['Red Fox', 'Arctic Fox', 'Fennec Fox', 'Kit Fox', 'Swift Fox'];
 
 //function slowFoxes ( foxTypes ) {
-  //return foxTypes.filter(function ( fox ) {
-    //return fox != 'Swift Fox';
-  //});
+//return foxTypes.filter(function ( fox ) {
+//return fox != 'Swift Fox';
+//});
 //}
 //var mySlowFox = slowFoxes ( foxTypes );
 //console.log(mySlowFox);
@@ -30,8 +30,8 @@ var foxTypes = ['Red Fox', 'Arctic Fox', 'Fennec Fox', 'Kit Fox', 'Swift Fox'];
 
 var testScores = [100, 99, 92, 93, 48, 74, 64, 22, 46, 86];
 
-function passingScores( arrOfScores ) {
-  return arrOfScores.filter(function ( score ) {
+function passingScores(arrOfScores) {
+  return arrOfScores.filter(function(score) {
     return score > 69;
   });
 }

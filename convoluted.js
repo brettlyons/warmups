@@ -1,16 +1,16 @@
-function convoluted( string ) {
+function convoluted(string) {
   var output = '';
-  function repeatChrAndIndex ( inStr ) {
-    for(var i = 0; i < string.length; i++) {
+  function repeatChrAndIndex(inStr) {
+    for (var i = 0; i < string.length; i++) {
       output += inStr + string.charAt(i);
     }
-  return output;
+    return output;
   }
-return repeatChrAndIndex; // <-- look ma, no parenthesis!
+  return repeatChrAndIndex; // <-- look ma, no parenthesis!
 }
 
-var thisOldString = convoluted( 'This Old String' );
-var withBobVilla = convoluted( 'And Norms New Yankee Workshop' );
+var thisOldString = convoluted('This Old String');
+var withBobVilla = convoluted('And Norms New Yankee Workshop');
 
 console.log(thisOldString('a'));
 console.log(withBobVilla('a'));

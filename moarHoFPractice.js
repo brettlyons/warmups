@@ -10,7 +10,7 @@ var foods = [
   {name: 'Cherry pie', department: 'grocery', price: 1},
   {name: 'Boisonberry pie', department: 'grocery', price: 0},
   {name: 'Poisonberry pie', department: 'grocery', price: 900},
-  {name: 'Meat pie', department: 'meat', price: 50}
+  {name: 'Meat pie', department: 'meat', price: 50},
 ];
 
 // GOAL: Return a list of food names that
@@ -26,23 +26,23 @@ foods.filter(function(food) {
 // for foods that cost at least 10, but less than 20,
 // and have a department of grocery or meat
 
-var isAffordable = function ( food ) {
+var isAffordable = function(food) {
   return food.price <= 20 && food.price >= 10;
 }
 
-var groceryOrMeat = function ( food ) {
-  return ( food.department === 'grocery' || food.department === 'meat' );
+var groceryOrMeat = function(food) {
+  return (food.department === 'grocery' || food.department === 'meat');
 }
 
 
-var foodNamePrice = function( theFoodList ) {
+var foodNamePrice = function(theFoodList) {
   var tmpFoods = theFoodList
     .filter(isAffordable)
     .filter(groceryOrMeat)
-    .map(function ( food ){
-      return food.name + " - " + food.price;
+    .map(function(food) {
+      return food.name + ' - ' + food.price;
     })
   return tmpFoods;
 }
 
-console.log(foodNamePrice( foods ));
+console.log(foodNamePrice(foods));

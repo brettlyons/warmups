@@ -1,13 +1,13 @@
-function greet ( inString ) {
-  console.log( "Hello " + inString );
+function greet(inString) {
+  console.log('Hello ' + inString);
 };
 
 greet();
-greet("Haskell Curry");
-greet("Mister Data");
+greet('Haskell Curry');
+greet('Mister Data');
 
-function sumOfTwo ( x, y ) {
+function sumOfTwo(x, y) {
   return x + y;
 };
-console.log( "" + sumOfTwo(2, 4) );
-console.log( "" +  sumOfTwo(10, 48730) );
+console.log('' + sumOfTwo(2, 4));
+console.log('' +  sumOfTwo(10, 48730));

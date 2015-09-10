@@ -22,17 +22,17 @@
  *
  */
 
-function strip ( inString ) {
+function strip(inString) {
   var firstNonSpaceIndex = 0;
   var lastNonSpaceIndex = inString.length - 1;
-  var output = "";
+  var output = '';
 
-  while ( inString[firstNonSpaceIndex] == ' '
-      || inString[lastNonSpaceIndex] == ' ' ) {
+  while (inString[firstNonSpaceIndex] == ' '
+      || inString[lastNonSpaceIndex] == ' ') {
     if (inString[firstNonSpaceIndex] == ' ') { firstNonSpaceIndex++; }
     if (inString[lastNonSpaceIndex] == ' ') { lastNonSpaceIndex--; }
   }
-  for ( var j = firstNonSpaceIndex ; j < lastNonSpaceIndex ; j++ ) {
+  for (var j = firstNonSpaceIndex ; j < lastNonSpaceIndex ; j++) {
     output += inString[j];
   }
   return output;
@@ -41,10 +41,10 @@ function strip ( inString ) {
 
 
 
-var theString = "   My String    Loves Spaces!!     ";
+var theString = '   My String    Loves Spaces!!     ';
 console.log(theString.trim());
 // My String    Loves Spaces!
-console.log(strip('      Spaaaaaace')+'||||'); // | guard the spaces so they
-console.log(strip('Spaaaaaace      ')+'||||'); // are more apparent when logged.
-console.log(strip('   Spaaaaaace   ')+'||||');
-console.log(strip('      Spaa   ...aaaace     ')+'||||');
+console.log(strip('      Spaaaaaace') + '||||'); // | guard the spaces so they
+console.log(strip('Spaaaaaace      ') + '||||'); // are more apparent when logged.
+console.log(strip('   Spaaaaaace   ') + '||||');
+console.log(strip('      Spaa   ...aaaace     ') + '||||');

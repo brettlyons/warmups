@@ -19,12 +19,12 @@
 //console.log(reverseEachElement ( [ 'rocky mountain goat' ] ));
 
 
-function averagePairs ( inArr ) {
+function averagePairs(inArr) {
   var output = [];
-  for ( var i = 1 ; i < inArr.length ; i++ ) {
-    output.push((inArr[i-1] + inArr[i])/2);
+  for (var i = 1 ; i < inArr.length ; i++) {
+    output.push((inArr[i - 1] + inArr[i]) / 2);
   }
-return output;
+  return output;
 };
 console.log(averagePairs([2, 6, 5, 5, 5]));
 console.log(averagePairs([2,6,8,3,3]));

@@ -24,17 +24,17 @@ function max(orderableArray) {
 
   function go(currentMax, orderableArray) {
     return (orderableArray.length === 0) ?
-      currentMax : function () {
+      currentMax : function() {
         return go(smallMax(currentMax, orderableArray[0])
-            , orderableArray.slice(1)); }
+      , orderableArray.slice(1)); }
   }
 
   function smallMax(a,b) {
-   return ( a <= b ) ? b : a ;
+    return (a <= b) ? b : a ;
   }
 
   var f = go(orderableArray[0], orderableArray.slice(1));
-  while (typeof f == 'function' )  {
+  while (typeof f == 'function')  {
     f = f();
   }
   return f;
@@ -42,7 +42,7 @@ function max(orderableArray) {
 
 function range(n) { // just for testing
   var output = [];
-  for (var i = 0 ; i <= n ; ) {
+  for (var i = 0 ; i <= n ;) {
     output.push(i++);
   }
   return output;

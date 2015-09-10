@@ -16,25 +16,25 @@
 //console.log("4 ?", findExtra([1,2,3,4,5,6,7,8,9,4]));// 4
 //console.log(" [] ? NaN ?", findExtra([])); // NaN -- Srsly?
 
-function detectSingulars(array){
+function detectSingulars(array) {
   if (array === []) { return array; }
-  function isMatch (x1, x2) {
+  function isMatch(x1, x2) {
     return x1 === x2;
   }
-  array.sort(function(a, b){
+  array.sort(function(a, b) {
     return a - b;
   }); // critical!
 
-  for ( var i = 0 ; i < array.length ; i += 2) {
-    if (!isMatch(array[i], array[i+1])) {return array[i];}
+  for (var i = 0 ; i < array.length ; i += 2) {
+    if (!isMatch(array[i], array[i + 1])) {return array[i];}
   }
-  return "no singulars found";
+  return 'no singulars found';
 }
 
-console.log("Singular is: 1 ?: ", detectSingulars([1,2,3,3,2]));
-console.log("Singular is: 4 ?: ", detectSingulars([1,2,3,4,2,3,1]));
+console.log('Singular is: 1 ?: ', detectSingulars([1,2,3,3,2]));
+console.log('Singular is: 4 ?: ', detectSingulars([1,2,3,4,2,3,1]));
 
-console.log("No singulars: ", detectSingulars([1,2,3,1,2,3]));
+console.log('No singulars: ', detectSingulars([1,2,3,1,2,3]));
 //testForAsWhile();
 
 //function testForAsWhile() {

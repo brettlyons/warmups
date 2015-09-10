@@ -9,14 +9,14 @@ var lapObj = {
   isAsleep: false,
   numberOfDaysSinceLastRestart: 0,
 
-  turnOff: function ( ) {
+  turnOff: function() {
     this.isOn = false;
     this.numberOfDaysSinceLastRestart = 0;
   },
 
-  toggleSleep: function () {
+  toggleSleep: function() {
     this.isAsleep = !this.isAsleep;
-  }
+  },
 };
 
 var coffeeMug = {
@@ -24,13 +24,13 @@ var coffeeMug = {
   capacityInOz: 8,
   color: 'blue',
 
-  fill: function () {
+  fill: function() {
     this.full = true;
   },
 
-  empty: function () {
+  empty: function() {
     this.full = false;
-  }
+  },
 };
 
 console.log(lapObj.isAsleep);

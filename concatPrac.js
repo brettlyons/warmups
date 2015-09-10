@@ -14,25 +14,25 @@ var new3 = [['f'], 'g'];
 // ['a','b','c',['f'],'g']
 //
 
-function concat ( array1, array2 ) {
-  ( array1.length == undefined ) ? array1 = Array(array1) : array1 = array1;
-  ( array2.length == undefined ) ? array2 = Array(array2) : array2 = array2;
+function concat(array1, array2) {
+  (array1.length == undefined) ? array1 = Array(array1) : array1 = array1;
+  (array2.length == undefined) ? array2 = Array(array2) : array2 = array2;
   // fair attribution, I overheard Lisa's solution. All her idea ^
   var output = [];
-  for ( var i = 0 ; i < array1.length ; i++ ) {
+  for (var i = 0 ; i < array1.length ; i++) {
     output.push(array1[i]);
   }
-  for ( var j = 0 ; j < array2.length ; j++ ) {
+  for (var j = 0 ; j < array2.length ; j++) {
     output.push(array2[j]);
   }
-return output;
+  return output;
 }
 
 console.log(concat(original, new1));
 // ['a', 'b', 'c', 'd']
 console.log(concat(new2, new3));
 // ['e', ['f'], 'g']
-var new4 = {thing: "awesome"}
+var new4 = {thing: 'awesome'}
 console.log(concat(original, new4));
 // [ 'a', 'b', 'c', { thing: 'awesome' } ]
 

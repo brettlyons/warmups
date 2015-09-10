@@ -15,8 +15,8 @@
 // Many data structures can be defined recurisvely, which makes understanding
 // recursion highly useful.
 
-function power( base, exponent ) {
-  return ( exponent == 0 ) ? 1 : (base * power(base, exponent-1));
+function power(base, exponent) {
+  return (exponent == 0) ? 1 : (base * power(base, exponent - 1));
 }
 
 console.log(power(2, 3));
@@ -31,22 +31,22 @@ console.log(powerSturdy(2, -2));
 
 function powerSturdy(base, exponent) {
 
-  if(exponent < 0) {
-    base = 1/base
+  if (exponent < 0) {
+    base = 1 / base
     exponent = Math.abs(exponent);
   }
-  if ( exponent == 0 ) { return 1; }
+  if (exponent == 0) { return 1; }
 
-  return base * powerSturdy(base, exponent-1);
+  return base * powerSturdy(base, exponent - 1);
 }
 
 function powerRationalStyle(base, exponent) {  // only useful to humans,
   // or a mathy tokenizer
   return (exponent < 0) ? rationalWrap(power(base, Math.abs(exponent)))
-  : base * power(base, exponent-1);
+  : base * power(base, exponent - 1);
 
-  function rationalWrap (result) {
-    return "1/"+result;  // *KLAXONS* **HACK ALERT** **HACK ALERT**
+  function rationalWrap(result) {
+    return '1/' + result;  // *KLAXONS* **HACK ALERT** **HACK ALERT**
   }
 }
 

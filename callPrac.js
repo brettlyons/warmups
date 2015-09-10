@@ -1,13 +1,13 @@
 //Mammal Constructor
-function Mammal(name, age){
+function Mammal(name, age) {
   this.name = name;
   this.age = age;
   this.offspring = [];
 }
 
 // Mammal Methods
-Mammal.prototype.procreate = function(){
-  var createOffsprint = new Mammal("Baby "+ this.name);
+Mammal.prototype.procreate = function() {
+  var createOffsprint = new Mammal('Baby ' + this.name);
   this.offspring.push(createOffsprint);
 };
 Mammal.prototype.toString = function() {
@@ -22,13 +22,13 @@ var someMammal = new Mammal('Chester', 22);
 console.log(someMammal.toString());
 
 // example of Dog constructor with `call`
-function Dog(name, age, breed){
+function Dog(name, age, breed) {
   this.breed = breed;
   Mammal.call(this, name, age);
 }
 
 // example of Dog constructor with `apply`
-function Dog(name, age, breed){
+function Dog(name, age, breed) {
   this.breed = breed;
   Mammal.apply(this, arguments);
 }
@@ -41,7 +41,7 @@ Dog.prototype = Object.create(Mammal.prototype);
 // to test this, comment/uncomment it.  The console logs below will show
 // the difference between constructors
 
-var becky = new Dog("becky", 8, "Newfoundland");
+var becky = new Dog('becky', 8, 'Newfoundland');
 console.log(Dog.prototype.constructor)
 console.log(typeof becky);
 console.log(becky);
