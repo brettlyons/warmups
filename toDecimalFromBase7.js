@@ -3,7 +3,7 @@ var ramda = require('ramda');
 function toDecimalFromBase(base, inString) {
   var tmpArray = inString.split('');
 
-  function mult(x,y) {
+  function mult(x, y) {
     return x * y;
   }
 
@@ -16,4 +16,4 @@ function toDecimalFromBase(base, inString) {
 } // pure function
 //even though it mutates a variable local to it's scope?
 
-console.log(toDecimalFromBase(7,'1233215'));
+console.log(toDecimalFromBase(7, '1233215'));

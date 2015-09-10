@@ -4,7 +4,7 @@ function sum() {
   var inputArr = arguments;
   output = 0;
   for (var i = 0 ; i < inputArr.length ; i++) {
-    output += inputArr[i];
+    output += inputArr[ i ];
   }
   return output;
 }

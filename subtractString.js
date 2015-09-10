@@ -1,4 +1,5 @@
 var fjs = require('functional.js');
+
 //takes a string of arithmitic and returns the correct result
 
 //function subtractstring ( string ) {

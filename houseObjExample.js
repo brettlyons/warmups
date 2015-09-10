@@ -4,6 +4,7 @@
 function House(color, windows) {
   this.color = color || 'colorless';
   this.windows = windows;
+
   // paintHouse was here as a method
   this.logMyThing = function() {
     console.log(this);
@@ -12,7 +13,7 @@ function House(color, windows) {
 
 thisoldHouse = new House('green', true);
 
-someNewHouse = new House (false);
+someNewHouse = new House(false);
 someNewHouse.logMyThing();
 
 var paintHouse = function(newColor) {
@@ -24,6 +25,7 @@ console.log(thisoldHouse.color);
 thisoldHouse.logMyThing();
 
 paintHouse.apply(thisoldHouse, ['orange']);
+
 //function.apply ( objName , [parameters for function]);
 
 console.log(thisoldHouse.color);

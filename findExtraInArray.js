@@ -26,7 +26,7 @@ function detectSingulars(array) {
   }); // critical!
 
   for (var i = 0 ; i < array.length ; i += 2) {
-    if (!isMatch(array[i], array[i + 1])) {return array[i];}
+    if (!isMatch(array[ i ], array[ i + 1 ])) {return array[ i ];}
   }
   return 'no singulars found';
 }
@@ -35,6 +35,7 @@ console.log('Singular is: 1 ?: ', detectSingulars([1,2,3,3,2]));
 console.log('Singular is: 4 ?: ', detectSingulars([1,2,3,4,2,3,1]));
 
 console.log('No singulars: ', detectSingulars([1,2,3,1,2,3]));
+
 //testForAsWhile();
 
 //function testForAsWhile() {

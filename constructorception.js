@@ -6,14 +6,14 @@ function Constructor(param) {
         Constructor: function(param) {
           console.log('I heard your encapsulation liked encapsulation, so I added some constructors to your constructors...',  param);
 
-        },
+        }
 
       }
-    },
+    }
   }
 
 }
 
-var construc = new Constructor ();
+var construc = new Constructor();
 
 console.log(construc.Constructor().Constructor('dawg'));

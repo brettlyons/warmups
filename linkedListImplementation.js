@@ -26,11 +26,10 @@ LinkedList.prototype.pop = function() {
 }
 
 LinkedList.prototype.push = function(data) {
-  this.head = (this.head == undefined)
-    ? new Node(data, null)
+  this.head = (this.head == undefined) ?
+    new Node(data, null)
     : new Node(data, this.head);
 }
-
 
 LinkedList.prototype.length = function() {
   function go(currHead) {
@@ -87,4 +86,5 @@ LinkedList.prototype.insertAtIndex = function(node, index) {
 var kazerp = new Node('Nonth', null)
 myFreshList.insertAtIndex(kazerp, 1);
 console.log('....', myFreshList);
+
 // maybe try "removing the element at the kth index"

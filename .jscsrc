@@ -1,5 +1,3 @@
 {
-	"preset": "node-style-guide",
-	"requireCapitalizedComments": null,
-	"requireSpaceAfterLineComment": null
+	"preset": "google"
 }

@@ -5,7 +5,7 @@ function f(x) {
     y = 1;
     return 'Yo dawg, so I heard your closures like closures, so I added some closures to your closures';
   }
-  return g (x) ;
+  return g(x) ;
 };
 
 var thingy = f(1);

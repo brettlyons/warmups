@@ -5,10 +5,10 @@ function replace(str, substr, replacestr) {
   var substrPos = -1;
   replacestr = replacestr || '';
   for (var i = 0 ; i < str.length ; i++) {
-    if (substr[0] == str[i]) {
+    if (substr[ 0 ] == str[ i ]) {
       substrPos = i;
       for (var j = 0 ; j < substr.length ; j++) {
-        if (substr[j] != str[i + j]) {
+        if (substr[ j ] != str[ i + j ]) {
           substrPos = -1;
           break;
         }
@@ -18,9 +18,9 @@ function replace(str, substr, replacestr) {
   var unforIndex = 0;
   for (var i = 0 ; i < str.length ; i++) {
     if (substrPos <= i && replacestr.length > unforIndex) {
-      output += replacestr[unforIndex];
+      output += replacestr[ unforIndex ];
       unforIndex++;
-    } else { output += str[i]; }
+    } else { output += str[ i ]; }
   }
   return output;
 }

@@ -3,12 +3,12 @@ function rotateEvenIndices(inString) {
   var stackOfChars = [];
   var output = '';
   for (var i = 0 ; i < inString.length ; i++) {
-    if (i % 2 == 0) { stackOfChars.unshift(inString[i]); }
+    if (i % 2 == 0) { stackOfChars.unshift(inString[ i ]); }
   }
   stackOfChars.push(stackOfChars.shift()); // puts 0th element onto the end
 
   for (var i = 0 ; i < inString.length ; i++) {
-    output += (i % 2 == 0) ? stackOfChars.pop() : inString[i];
+    output += (i % 2 == 0) ? stackOfChars.pop() : inString[ i ];
   }
   return output;
 }

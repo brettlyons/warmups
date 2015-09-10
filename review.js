@@ -26,7 +26,6 @@ var hoisted2 = dostThouEvenHoist('10');
 console.log(hoisted());
 console.log(hoisted2());
 
-
 var myObjectDemo = {
   definition: 'The definition is'; // state
   getDef: function(defName) { //behavior
@@ -40,12 +39,11 @@ var myObjectDemo = {
     defArray:  'An array is a sequentially indexed , ordered (and in some languages, sequentailly stored), set of values.  In some languages, type invariance is required, not so in JS.';
 
     defObject = 'An javascript object is a collection of property/value pairs.'
-  },
+  }
 };
 
 // what is function/method ?
 // methods are properties of objects whose value is a function.
 // functions are sets of instructions defined seperately from invocation/execution.
 //
-
 

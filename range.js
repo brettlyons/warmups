@@ -13,11 +13,13 @@ var xs = new Array();
 function range(start, end) {
   if (start == end) { return xs }
   xs.push(start + 1);
+
   //  console.log(start);
   return range(start + 1, end);
 }
 
-console.log(range (5, 15));
-console.log(range (-10, 10));
+console.log(range(5, 15));
+console.log(range(-10, 10));
+
 //console.log(range (0, 15700));
 

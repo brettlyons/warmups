@@ -19,4 +19,3 @@ while (roomNum < 5) {
   teamNum = 1;
 }
 
-

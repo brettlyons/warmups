@@ -21,7 +21,7 @@ function whattheoohhhsh(x) {
                 return 0;
               }
               console.log('');
-              return aaaaaaaaaah (x - 1);
+              return aaaaaaaaaah(x - 1);
             }
             return aaaaaaaaaah;
           }

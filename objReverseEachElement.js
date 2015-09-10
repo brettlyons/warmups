@@ -1,7 +1,6 @@
 //1.) the 'this' keyword refers to a property
 //within an object from a method within that obj.
 
-
 //function reverseEachElement ( arrOfStrings ) {
   //var output = [];
   //var ntmpString = '';
@@ -18,11 +17,10 @@
 //console.log(reverseEachElement ( [ 'cat', 'dog', 'horse' ] ));
 //console.log(reverseEachElement ( [ 'rocky mountain goat' ] ));
 
-
 function averagePairs(inArr) {
   var output = [];
   for (var i = 1 ; i < inArr.length ; i++) {
-    output.push((inArr[i - 1] + inArr[i]) / 2);
+    output.push((inArr[ i - 1 ] + inArr[ i ]) / 2);
   }
   return output;
 };

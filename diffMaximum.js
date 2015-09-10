@@ -25,15 +25,14 @@ function max(orderableArray) {
   function go(currentMax, orderableArray) {
     return (orderableArray.length === 0) ?
       currentMax : function() {
-        return go(smallMax(currentMax, orderableArray[0])
-      , orderableArray.slice(1)); }
+        return go(smallMax(currentMax, orderableArray[ 0 ]), orderableArray.slice(1)); }
   }
 
-  function smallMax(a,b) {
+  function smallMax(a, b) {
     return (a <= b) ? b : a ;
   }
 
-  var f = go(orderableArray[0], orderableArray.slice(1));
+  var f = go(orderableArray[ 0 ], orderableArray.slice(1));
   while (typeof f == 'function')  {
     f = f();
   }

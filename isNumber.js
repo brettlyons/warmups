@@ -14,10 +14,10 @@
  *};
  *
  */
-console.log(isNumber (3.41)); //true
-console.log(isNumber (4)) ;  //true
-console.log (isNumber (333 - 4)); //true
-console.log (isNumber ('7829x9')); //false
+console.log(isNumber(3.41)); //true
+console.log(isNumber(4)) ;  //true
+console.log(isNumber(333 - 4)); //true
+console.log(isNumber('7829x9')); //false
 /*
  *
  *function isNumberTwo( input ) {

@@ -13,7 +13,7 @@ Mammal.prototype.procreate = function() {
 Mammal.prototype.toString = function() {
   var output = [];
   for (var i = 0; i < this.offspring.length; i++) {
-    output.push(this.offspring[i].name);
+    output.push(this.offspring[ i ].name);
   }
   return output.join('\n');
 };

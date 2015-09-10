@@ -17,7 +17,6 @@ function reverse(string) {
   return string.split('').reverse().join('');
 }
 
-
 //function rotateInPlace ( array ){
 //var offset = array.length-1;
 //var tmpLeft, tmpRight;
@@ -33,9 +32,9 @@ function reverse(string) {
 //}
 function rotateInPlace(array) {
   for (var i = 0 ; i < array.length / 2 ; i++) {
-    var tmp = array[i];
-    array[i] = array[array.length - 1 - i]
-    array[array.length - 1 - i ] = tmp;
+    var tmp = array[ i ];
+    array[ i ] = array[ array.length - 1 - i ]
+    array[ array.length - 1 - i ] = tmp;
   }
   return array;
 }
@@ -47,10 +46,11 @@ console.log(rotateInPlace(myString2));
 console.log(myString1);
 console.log(myString2);
 
-
 function curriedSum(numberFoo) {
+
   //new scope
   return function(numberBar) {
+
     //new scope
     //both scopes combined are *lexical* scope . . .
     return numberFoo + numberBar;

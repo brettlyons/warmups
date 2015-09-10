@@ -1,4 +1,4 @@
-console.log (' Beginning periodization . . . ');
+console.log(' Beginning periodization . . . ');
 var piToggle = 2.5;
 var topTime = new Date();// these hold Date objects
 var botTime = new Date();
@@ -14,11 +14,11 @@ while (i < 10000) {
       piToggle = 0.5;
       botTime = new Date();
     }
-    jitterArray.push (botTime.getTime() - topTime.getTime());
+    jitterArray.push(botTime.getTime() - topTime.getTime());
   }, Math.cos(Math.PI * piToggle));
   i++;
 }
 setTimeout(function() {
-  console.log('Jitter in ms over 10k runs: ',(jitterArray.reduce(function(n, p) {return n + p}, 0)) / jitterArray.length);
+  console.log('Jitter in ms over 10k runs: ', (jitterArray.reduce(function(n, p) {return n + p}, 0)) / jitterArray.length);
 }, 1000);
 

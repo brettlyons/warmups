@@ -9,8 +9,8 @@ function maxSubstring(string1, string2) {
   for (var i = 0 ; i < shortestString.length ; i++) {
     for (var j = 1 ; j < shortestString.length ; j++) {
       tmpSubstring = shortestString.substring(i, j + 1);
-      if (longestString.indexOf(tmpSubstring) != -1
-          && tmpSubstring.length >= outputString.length) {
+      if (longestString.indexOf(tmpSubstring) != -1 &&
+          tmpSubstring.length >= outputString.length) {
         outputString = tmpSubstring;
       }
     }

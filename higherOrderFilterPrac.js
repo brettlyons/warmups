@@ -27,7 +27,6 @@ var foxTypes = ['Red Fox', 'Arctic Fox', 'Fennec Fox', 'Kit Fox', 'Swift Fox'];
 //var mySlowFox = slowFoxes ( foxTypes );
 //console.log(mySlowFox);
 
-
 var testScores = [100, 99, 92, 93, 48, 74, 64, 22, 46, 86];
 
 function passingScores(arrOfScores) {
@@ -36,5 +35,4 @@ function passingScores(arrOfScores) {
   });
 }
 console.log(passingScores(testScores));
-
 

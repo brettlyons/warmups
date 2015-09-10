@@ -5,8 +5,9 @@ console.log(map1.get('b'));
 console.log(map2.get('b'));
 console.log(map1.get('b'));
 
-console.log (
+console.log(
   Immutable.Range(100, 1)
+
 //  .skip(00)
 //  .map(function ( n ) { return  -n; })
 //  .filter(function ( n ) {return n % 2 === 0} )

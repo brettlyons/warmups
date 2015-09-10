@@ -98,10 +98,9 @@ var people = [
   {firstName: 'Lexie', lastName: 'Spinka', country: 'England', age: 10},
   {firstName: 'Hassan', lastName: 'Macejkovic', country: 'IRL', age: 58},
   {firstName: 'Keira', lastName: 'Cronin', country: 'UK', age: 79},
-  {firstName: 'Cassandre', lastName: 'Blanda', country: 'Canada', age: 78},
+  {firstName: 'Cassandre', lastName: 'Blanda', country: 'Canada', age: 78}
 
 ];
-
 
 // 1. Output the last names of all people from North America who have
 // a firstName that begins with L
@@ -109,11 +108,9 @@ var people = [
 //2. Output the countries of all people over 60 years old, all countries
 //should be listed in the same format (either full name or country code)
 
-
 //3 Produce an object that contains a count of people by country,
 //it would look like:
 // {"United States": X, "Canada": Y, etc...}
-
 
 var isFromUS = function(obj) {
   return obj.country === 'US' || obj.country === 'United States';
@@ -135,7 +132,7 @@ var isFromNorthAmerica = function(obj) {
 }
 
 var firstNameBeginsWithL = function(obj) {
-  return obj.firstName[0] === 'L';
+  return obj.firstName[ 0 ] === 'L';
 }
 
 var lastNameFromFirst = function(obj) {
@@ -167,13 +164,13 @@ var countryConvert = function(country) {
   if (country === 'CAN') { return 'Canada'; }
   if (country === 'UK') { return 'England'; }
   return country;
-}
+};
 
 var countriesOfOver60 = function(people) {
   return people
     .filter(over60)
     .map(countryFromObj);
-}
+};
 console.log(countriesOfOver60(people)); // this logs an Array for # 2
 
 // 3. Produce an object that contains a count of people by country,
@@ -184,8 +181,12 @@ var countOfPeopleByCountry = function(people) {
   var numIRL = people.map(countryConvert).filter(isFromIRL).length;
   var numUS = people.map(countryConvert).filter(isFromUS).length;
   var numCAN = people.map(countryConvert).filter(isFromCanada).length;
-  return {'United States': numUS, 'Canada':numCAN, 'Ireland':numIRL
-    , 'England':numUK};
-}
+  return {
+    'United States': numUS
+    , 'Canada': numCAN
+    , 'Ireland': numIRL
+    , 'England': numUK
+  };
+};
 
-console.log(countOfPeopleByCountry (people)) // this solves #3.
+console.log(countOfPeopleByCountry(people)); // this solves #3.

@@ -27,22 +27,20 @@ function strip(inString) {
   var lastNonSpaceIndex = inString.length - 1;
   var output = '';
 
-  while (inString[firstNonSpaceIndex] == ' '
-      || inString[lastNonSpaceIndex] == ' ') {
-    if (inString[firstNonSpaceIndex] == ' ') { firstNonSpaceIndex++; }
-    if (inString[lastNonSpaceIndex] == ' ') { lastNonSpaceIndex--; }
+  while (inString[ firstNonSpaceIndex ] == ' ' ||
+      inString[ lastNonSpaceIndex ] == ' ') {
+    if (inString[ firstNonSpaceIndex ] == ' ') { firstNonSpaceIndex++; }
+    if (inString[ lastNonSpaceIndex ] == ' ') { lastNonSpaceIndex--; }
   }
   for (var j = firstNonSpaceIndex ; j < lastNonSpaceIndex ; j++) {
-    output += inString[j];
+    output += inString[ j ];
   }
   return output;
 }
 
-
-
-
 var theString = '   My String    Loves Spaces!!     ';
 console.log(theString.trim());
+
 // My String    Loves Spaces!
 console.log(strip('      Spaaaaaace') + '||||'); // | guard the spaces so they
 console.log(strip('Spaaaaaace      ') + '||||'); // are more apparent when logged.

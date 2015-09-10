@@ -4,7 +4,6 @@
 // state.  Object.create() can be used to declare an object with a specific
 // prototype, while use of a constructor requires definition of a prototype afterwards.
 
-
 var intersection = function(arrayOne, arrayTwo) {
   function isMatch(x1, x2) {
     return x1 === x2;
@@ -15,16 +14,14 @@ var intersection = function(arrayOne, arrayTwo) {
 
   for (var i = 0 ; i < arrayOne.length ; i++) {
     for (var j = 0 ; j < arrayTwo.length ; j++) {
-      if (isMatch(arrayOne[i], arrayTwo[j])) {
-        output.push(arrayOne[i]);
+      if (isMatch(arrayOne[ i ], arrayTwo[ j ])) {
+        output.push(arrayOne[ i ]);
         break;
       }
     }
   }
   return output;
 }
-
-
 
 //var recursiveIntersection = function(arrayOne, arrayTwo) {
 //var output = [];
@@ -36,7 +33,6 @@ var intersection = function(arrayOne, arrayTwo) {
 //}
 //return go(arrayOne.slice(1), arrayTwo)
 //}
-
 
 var test1 = [1,2,3,4,5];
 var test2 = [3,4,7,8,9];
@@ -50,12 +46,11 @@ console.log(intersection(test2, test3)); // []
 function allCharsUnique(string) {
   for (var i = 0 ; i < string.length ; i++) {
     for (var j = i ; j < string.length ; j++) {
-      if (string[i] == string[j]) {
+      if (string[ i ] == string[ j ]) {
         return false;
       }
     }
   }
   return true;
 }
-
 

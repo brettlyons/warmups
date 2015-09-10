@@ -10,7 +10,7 @@ var foods = [
   {name: 'Cherry pie', department: 'grocery', price: 1},
   {name: 'Boisonberry pie', department: 'grocery', price: 0},
   {name: 'Poisonberry pie', department: 'grocery', price: 900},
-  {name: 'Meat pie', department: 'meat', price: 50},
+  {name: 'Meat pie', department: 'meat', price: 50}
 ];
 
 // GOAL: Return a list of food names that
@@ -33,7 +33,6 @@ var isAffordable = function(food) {
 var groceryOrMeat = function(food) {
   return (food.department === 'grocery' || food.department === 'meat');
 }
-
 
 var foodNamePrice = function(theFoodList) {
   var tmpFoods = theFoodList

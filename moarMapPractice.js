@@ -1,8 +1,8 @@
 var people = [
-  {name: 'Mario', birthYear: 1960 },
-  {name: 'Luigi', birthYear: 1965 },
-  {name: 'Peach', birthYear: 1970 },
-  {name: 'Yoshi', birthYear: 1975 },
+  {name: 'Mario', birthYear: 1960},
+  {name: 'Luigi', birthYear: 1965},
+  {name: 'Peach', birthYear: 1970},
+  {name: 'Yoshi', birthYear: 1975}
 ]
 
 // Map all of the names

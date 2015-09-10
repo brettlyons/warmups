@@ -32,9 +32,6 @@ function arrayVersion(x, y) {
 }
 console.log(arrayVersion(2, 5), ' array vers, 10?');
 
-
-
-
 console.log(product(10, 5), '50 ?'); // 50
 console.log(product(5, 5), '25 ?'); // 25
 
@@ -46,8 +43,8 @@ console.log(multby2(5), '=== 10 ?'); //25
 // isPalindrome String -> Boolean
 
 var isPalindrome = function(input) {
-  return (input.toUpperCase().split('').reverse().join('')
-      === input.toUpperCase())
+  return (input.toUpperCase().split('').reverse().join('') ===
+      input.toUpperCase())
 }
 
 console.log(isPalindrome('aabbaa'), ' true ?'); //true
@@ -60,7 +57,4 @@ console.log(string1 == val2, ' true ? '); // true;
 console.log(string1 === val2, ' false ?'); //false
 // so remember kids, use === because it won't coerce your types for you,
 // and makes nesting sites for endangered bird species
-
-
-
 

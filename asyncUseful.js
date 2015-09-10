@@ -7,12 +7,13 @@ setTimeout(function() {
   console.log((usersObj.map(function(usersArr) {
     return usersArr.age;
   }).reduce(function(sum, age) {
-    return sum += age } , 0)) / usersObj.length);
+    return sum += age }, 0)) / usersObj.length);
 
   return (usersObj.map(function(usersArr) {
     return usersArr.age;
   }).reduce(function(sum, age) {
-    return sum += age } , 0)) / usersObj.length;
+    return sum += age }, 0)) / usersObj.length;
+
   // Use the getUsers function to retrieve all users. Then, map their ages, and reduce to the average age.
 }, 5000)
 

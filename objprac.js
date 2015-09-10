@@ -16,7 +16,7 @@ var lapObj = {
 
   toggleSleep: function() {
     this.isAsleep = !this.isAsleep;
-  },
+  }
 };
 
 var coffeeMug = {
@@ -30,7 +30,7 @@ var coffeeMug = {
 
   empty: function() {
     this.full = false;
-  },
+  }
 };
 
 console.log(lapObj.isAsleep);

@@ -5,17 +5,16 @@ function toDecimal(binaryString) {
 
   for (var i = 0 ; i < newBinaryString.length ; i++) {
     output += (newBinaryString.charCodeAt(i) === 49) ?
-      Number(Math.pow(2,i)) : 0;
+      Number(Math.pow(2, i)) : 0;
 
-    if (newBinaryString.charCodeAt(i) !== 49
-        && newBinaryString.charCodeAt(i) !== 48) {
+    if (newBinaryString.charCodeAt(i) !== 49 &&
+        newBinaryString.charCodeAt(i) !== 48) {
       console.log(binaryString + ' contains characters other than 0 or 1');
       return null;
     }
   }
   return output;
 }
-
 
 console.log('5 ? ', toDecimal('0101')); // 5
 console.log('3 ? ', toDecimal('0011')); // 3

@@ -5,11 +5,12 @@ function toLowerCase(inString) {
     arrOfCharCodes.push(inString.charCodeAt(i));
   }
   for (arrayIndex in arrOfCharCodes) {
+
     //console.log("DEBUG ***" + arrOfCharCodes[arrayIndex])
-    output += (arrOfCharCodes[arrayIndex] < 91 &&
-        arrOfCharCodes[arrayIndex] > 64) ?
-String.fromCharCode(arrOfCharCodes[arrayIndex] + 32) :
-String.fromCharCode(arrOfCharCodes[arrayIndex]);
+    output += (arrOfCharCodes[ arrayIndex ] < 91 &&
+        arrOfCharCodes[ arrayIndex ] > 64) ?
+String.fromCharCode(arrOfCharCodes[ arrayIndex ] + 32) :
+String.fromCharCode(arrOfCharCodes[ arrayIndex ]);
   }
 
   return output;
@@ -22,11 +23,12 @@ function toUpperCase(inString) {
     arrOfCharCodes.push(inString.charCodeAt(i));
   }
   for (arrayIndex in arrOfCharCodes) {
+
     //console.log("DEBUG ***" + arrOfCharCodes[arrayIndex])
-    output += (arrOfCharCodes[arrayIndex] < 123 &&
-        arrOfCharCodes[arrayIndex] > 96) ?
-String.fromCharCode(arrOfCharCodes[arrayIndex] - 32) :
-String.fromCharCode(arrOfCharCodes[arrayIndex]);
+    output += (arrOfCharCodes[ arrayIndex ] < 123 &&
+        arrOfCharCodes[ arrayIndex ] > 96) ?
+String.fromCharCode(arrOfCharCodes[ arrayIndex ] - 32) :
+String.fromCharCode(arrOfCharCodes[ arrayIndex ]);
   }
 
   return output;
@@ -40,13 +42,16 @@ var lower = 'lower';
 var upper = 'UPPER';
 
 console.log(lower.toLowerCase());
+
 //lower
 console.log(lower.toUpperCase());
+
 // LOWER
 
 console.log(upper.toLowerCase());
+
 // upper
 console.log(upper.toUpperCase());
-// UPPER
 
+// UPPER
 

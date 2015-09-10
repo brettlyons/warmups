@@ -15,4 +15,3 @@ console.log(construc.stuffItDoes('lambda expressions'));
 console.log(construc.stuffItDoes('the dishes with its mind'));
 console.log(construc.stuffItDoes('the stuff its doing'));
 
-

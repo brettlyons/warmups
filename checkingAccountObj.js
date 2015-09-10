@@ -10,5 +10,5 @@ var myBankAccount = {
   rmFromChecking: function(amnt) {
     this.checkingBalance > amnt ? this.checkingBalance += amnt :
       console.log('removal request value higher than quantity in balance.');
-  },
+  }
 };

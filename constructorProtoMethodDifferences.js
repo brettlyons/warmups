@@ -7,6 +7,7 @@ function myConstructor() {
 var myFreshNewConstructor = new myConstructor();
 
 myFreshNewConstructor.myMeth();
+
 //myFreshNewConstructor.myOtherMeth();
 
 myConstructor.prototype.myOtherMeth = function() {

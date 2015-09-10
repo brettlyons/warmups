@@ -1,4 +1,4 @@
-/*
+/* COMMENT
  *var zip = function ( xs, ys ) {
  *  var output = [];
  *  function go( xs, ys, output ) {
@@ -16,12 +16,11 @@ var zip = function(xs, ys) {
   var output = [];
   var bound = xs.length > ys.length ? xs.length : ys.length;
   for (var i = 0 ; i < bound ; i++) {
-    output.push(xs[i]);
-    output.push(ys[i]);
+    output.push(xs[ i ]);
+    output.push(ys[ i ]);
   }
   return output;
-}
-
+};
 
 console.log(zip([1,2,3], [4, 5, 6]));
 

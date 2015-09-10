@@ -20,8 +20,10 @@ function power(base, exponent) {
 }
 
 console.log(power(2, 3));
+
 //=> 8
 console.log(power(4, 2));
+
 //=> 16
 console.log(power(100, 154)); // Holy Mantissa, Watman!
 

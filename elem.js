@@ -1,14 +1,14 @@
 var include = function(array, target) {
   for (element in array) {
-    if ('object' == typeof (array[element])) {
-      for (sndElement in array[element]) {
-        if (target[sndElement] == array[element][sndElement] &&
-             array[element].length == target.length) {
+    if ('object' == typeof (array[ element ])) {
+      for (sndElement in array[ element ]) {
+        if (target[ sndElement ] == array[ element ][ sndElement ] &&
+             array[ element ].length == target.length) {
           return true;
         }
       }
     }
-    if (array[element] === target) { return true; }
+    if (array[ element ] === target) { return true; }
   }
   return false;
 }
@@ -21,7 +21,7 @@ console.log('false ?>> ' + include(a, 7)); //false
 console.log('false ?>> ' + include(a, '3')); //false
 console.log('false ?>> ' +  include(a, {a: 1})); //false
 console.log('true ?>> ' +  include(b, [2, 3])); //true ?
-console.log('true ? >> ' + include (c, {a: 1}));
+console.log('true ? >> ' + include(c, {a: 1}));
 console.log('false ? >> ' + include([1,2,3,[4,5,6]], [4,5]));
 
 /*
@@ -36,6 +36,7 @@ console.log('false ? >> ' + include([1,2,3,[4,5,6]], [4,5]));
  *return go( xs, y, false )
  *}
  */
+
 //console.log(elem([1,2,3], 3));
 //console.log("^ true ^ ");
 //console.log(elem([1,2,3], 2));
@@ -44,8 +45,6 @@ console.log('false ? >> ' + include([1,2,3,[4,5,6]], [4,5]));
 //console.log("^ false ^ ");
 //console.log(elem([1,2,3,4,5,34,62,43,32,5,3,4, 99], 99));
 //console.log("^ true ^ ");
-
-
 
 /*
  *

@@ -15,6 +15,7 @@
 //var total = 0;
 
 var numbers = [2,5,3,4];
+
 //var localMin = Infinity; // effectively 5.17e+307.
 
 //numbers.forEach(function ( number ) {

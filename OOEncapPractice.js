@@ -27,13 +27,14 @@ function Person(name, title, evil, enemyOfKing) {
     },
     setEnemyofKing: function(newEoKStatus) {
       that.enemyOfKing = newEoKStatus;
-    },
+    }
   };
 }
 
 var myself = new Person('brett', 'Unknown', false, false);
-var otherperson = new Person ('XYZ', 'ThisTitle', true, false);
+var otherperson = new Person('XYZ', 'ThisTitle', true, false);
 var joker = new Person('The Joker', 'Joker', true, true);
+
 //console.log(myself);
 
 function Castle() {
@@ -54,7 +55,7 @@ function Castle() {
 
     rmPerson: function(person) {
       that.people.pop(person);
-    },
+    }
   }
 }
 

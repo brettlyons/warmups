@@ -5,11 +5,11 @@ function Bicycle(wheelSize, color) {
 }
 
 Bicycle.prototype.toString = function() {
-  return 'This sweet '
-    + this.color
-    + ' bicycle has an awesome '
-    + this.wheelSize
-    + ' wheelset.';
+  return 'This sweet ' +
+    this.color +
+    ' bicycle has an awesome ' +
+    this.wheelSize +
+    ' wheelset.';
 
 };
 
@@ -20,8 +20,8 @@ Bicycle.prototype.takeForRide = function() {
 
 Bicycle.prototype.validateWheelSize = function(wheelSize) {
   if (this.validWheelSizes.indexOf(wheelSize) == -1) {
-    throw 'Wheelsize for road bikes must be one of '
-      + this.validWheelSizes.join(', ');
+    throw 'Wheelsize for road bikes must be one of ' +
+      this.validWheelSizes.join(', ');
   }
 };
 
