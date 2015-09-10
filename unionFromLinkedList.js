@@ -8,23 +8,23 @@ function Node(data, next) {
 }
 
 function commonDataBetweenLists(list1, list2) {
-  function go(list1, currData, output) {
-    console.log('ifhead list1 data:', list1.data, list1.next);
-    console.log('currdata', currData);
-    if(list1.data == currData) {
-      output.push(list1.data);
+  var output = [];
+  var l2Invariant = list2.head;
+  while(list1.head) {
+    while(list2.head) {
+      console.log("list head data", list1.head.data);
+      console.log('list 2 head data', list2.head.data);
+      console.log(list1.head.data == list2.head.data);
+      if ( list1.head.data == list2.head.data ) {
+        output.push(list1.head.data);
+      }
+      list2.head = list2.head.next;
     }
-    if(!list1.next) {
-      return output;
-    }
-    return go(list1.next, currData, output);
+    list1.head = list1.head.next;
+    list2.head = l2Invariant;
   }
-  while(!list2.next) {
-    return go(list1.head, list2.head.data, [])
-    list2.data = list2.data;
-  }
+  return output;
 }
-
 var l1 = new LinkedList(new Node('This is the head'));
 var foo = new Node('fooski');
 var bar = new Node('barski');
@@ -39,5 +39,3 @@ bar2.next = goo;
 
 console.log(commonDataBetweenLists(l1, l2));
 // ['barski']
-//
-
