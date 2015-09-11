@@ -12,9 +12,6 @@ function commonDataBetweenLists(list1, list2) {
   var l2Invariant = list2.head;
   while(list1.head) {
     while(list2.head) {
-      console.log("list head data", list1.head.data);
-      console.log('list 2 head data', list2.head.data);
-      console.log(list1.head.data == list2.head.data);
       if ( list1.head.data == list2.head.data ) {
         output.push(list1.head.data);
       }
