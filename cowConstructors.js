@@ -5,6 +5,7 @@ function Cow(name, num) {
     return String('moooooooo I\'m ' + this.name + ' moooooooo!!!!!!');
   }
 }
+
 function CowFarm(cows) {
   this.mooInOrder = function() {
     output = '';
