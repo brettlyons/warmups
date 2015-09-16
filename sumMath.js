@@ -19,6 +19,6 @@ var math = {
     return output;
   }
 }
-console.log(math.sum(1, 2, 3));
+console.log(math.sum(0, 2, 3));
 console.log(math.difference(1, 4));
 console.log(math.square(-2));

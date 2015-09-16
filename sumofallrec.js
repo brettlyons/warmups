@@ -11,13 +11,13 @@ return go( inputArr, 0 );
 
 function range( start, end ) {
   function go( start, end, xs ) {
-  if ( end == xs.length - 1) { return xs }
-
-  return go (start, xs.push(start+));
+  if ( end == xs[xs.length-1] ) { return xs; }
+  xs.push(start++);
+  return go(start, end, xs);
   }
-return go( nBound, [] );
+return go(start, end, [] );
 }
-console.log(range(1,10));
+console.log(range(-21,10));
 
 //console.log(sum(range(1,10)));
 
