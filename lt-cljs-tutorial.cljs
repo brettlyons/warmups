@@ -248,7 +248,7 @@ another-vector
 
 ;; Or with `get`...
 
-(get a-vector 0)
+(get another-vector 2)
 
 ;; ...which allows you to return an alternate value when the index is
 ;; out-of bounds.
