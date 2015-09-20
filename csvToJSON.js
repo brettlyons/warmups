@@ -10,4 +10,4 @@ function csvToJSON(line) {
   return retObj;
 }
 
-console.log(csvToJSON("WidgetsPerHour,5,6,3,2,4,4"));
+console.log(csvToJSON('WidgetsPerHour,5,6,3,2,4,4'));
