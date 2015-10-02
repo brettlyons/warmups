@@ -10,6 +10,11 @@ function allCharsUnique(string) {
     // example: return function () { return go(string.slice(1), cache); }
   }
   return go(string, {});
+  // var f = go(string, {});
+  // while (typeof f == 'function') {
+  //   f = f();
+  // }
+  // return f;
 }
 
 function allCharsUniqueIter(string) {
@@ -36,11 +41,11 @@ console.log(allCharsUnique('abcdefghijklmnop')); // true
 console.log(allCharsUnique('abcampql')); // false
 
 /* this pattern can be used to replace line 12 above. *\
-  // var f = go(string, {});
-  // while (typeof f == 'function') {
-  //   f = f();
-  // }
-  // return f;
+  var f = go(string, {});
+  while (typeof f == 'function') {
+    f = f();
+  }
+  return f;
   // // this pattern effectively renders any argument about speed or stack size
   // // moot when reasoning about recursion in javascript.
   // // since the most likely (english ascii) search space is only 127 characters
