@@ -1,13 +1,25 @@
+function intersectionFilter(array1, array2) {
+  return array1.filter(function(element) {
+    return (array2.indexOf(element) != -1);
+  });
+}
+const test1 = [1,2,3,4,5];
+const test2 = [3,4,7,8,9];
+const test3 = [];
+
+console.log(intersectionFilter(test1, test2)); // [3,4]
+console.log(intersectionFilter(test1, test3)); // []
+console.log(intersectionFilter(test2, test3)); // []
+
 // 1.) The two fundamental charataristics of objects are *STATE* and *BEHAVIOR*
 //
 // 2.) A constructor is run like a function, and so can be used to initialize
 // state.  Object.create() can be used to declare an object with a specific
 // prototype, while use of a constructor requires definition of a prototype afterwards.
-
+function isMatch(x1, x2) {
+  return x1 === x2;
+}
 var intersection = function(arrayOne, arrayTwo) {
-  function isMatch(x1, x2) {
-    return x1 === x2;
-  }
 
   var output = [];
   if (!arrayOne || !arrayTwo) { return output; }
@@ -21,7 +33,7 @@ var intersection = function(arrayOne, arrayTwo) {
     }
   }
   return output;
-}
+};
 
 //var recursiveIntersection = function(arrayOne, arrayTwo) {
 //var output = [];
@@ -34,12 +46,8 @@ var intersection = function(arrayOne, arrayTwo) {
 //return go(arrayOne.slice(1), arrayTwo)
 //}
 
-var test1 = [1,2,3,4,5];
-var test2 = [3,4,7,8,9];
-
 console.log(intersection(test1, test2)); // [3,4]
 
-var test3 = [];
 console.log(intersection(test1, test3)); // []
 console.log(intersection(test2, test3)); // []
 
@@ -53,4 +61,3 @@ function allCharsUnique(string) {
   }
   return true;
 }
-
