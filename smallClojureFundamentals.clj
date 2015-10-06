@@ -26,7 +26,11 @@
 (ns digitizer.core)
 
 (defn digitize [n]
-  (conj (/ n 10) (digitize (mod n 10))))
+  (split-at 1 n))
+(comment
+    (conj (digitize (/ n 10)))
+)
+
 
 
 (digitize 10203)
