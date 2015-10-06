@@ -2,6 +2,7 @@
 
 function greatestProductOfPairs(array) {
   if (array.length == 0) { return 0; }
+  if (typeof array == 'string') { return null; }
   var result = -Infinity;
   // count = 0;// demo of memoization, aka DRY javascript interpreter.
   //var mult = ramda.memoize(function (x,y) {

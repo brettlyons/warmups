@@ -14,4 +14,7 @@ describe('greatestProductOfPairs', function() {
   it('returns 0 if input is empty', function() {
     expect(greatestProductOfPairs(emptyInput)).toEqual(0);
   });
+  it('returns null if input is a string', function() {
+    expect(greatestProductOfPairs(nonNumberInput)).toEqual(null);
+  })
 });
