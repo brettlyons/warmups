@@ -22,3 +22,11 @@
   [lst]
 	(second (reverse lst))
 )
+
+(ns digitizer.core)
+
+(defn digitize [n]
+  (conj (/ n 10) (digitize (mod n 10))))
+
+
+(digitize 10203)
