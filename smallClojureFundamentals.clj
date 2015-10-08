@@ -23,14 +23,5 @@
 	(second (reverse lst))
 )
 
-(ns digitizer.core)
-
-(defn digitize [n]
-  (split-at 1 n))
-(comment
-    (conj (digitize (/ n 10)))
-)
-
-
-
-(digitize 10203)
+(reduce * (range 1 8))
+(reduce * (range 1 62))
