@@ -24,4 +24,4 @@
 )
 
 (reduce * (range 1 8))
-(reduce * (range 1 62))
+(reduce *' (range 1 62))
