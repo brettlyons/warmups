@@ -25,3 +25,5 @@
 
 (reduce * (range 1 8))
 (reduce *' (range 1 62))
+
+(take 1000 (repeat "websites"))
