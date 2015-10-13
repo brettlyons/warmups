@@ -28,8 +28,6 @@
 
 (take 1000 (repeat "websites"))
 
-(Math/sqrt 9)
-
 (= (last (sort (rest (reverse [2 5 4 1 3 6]))))
   (-> [2 5 4 1 3 6] (reverse) (rest) (sort) (last))
    5)
