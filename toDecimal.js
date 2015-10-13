@@ -1,10 +1,10 @@
 function toDecimal(binaryNumber) {
   return binaryNumber
     .toString()
-    .split("") // could .reverse() on the line after this, to avoid the array.length - index - 1 
+    .split("") 
     .reduce(function (accumulator, current, index, array) {
       return accumulator + (current * Math.pow(2, (array.length - index - 1)));
-  }, 0);
+    }, 0);
 }
 
 console.log(toDecimal(0)); // 0
