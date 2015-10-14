@@ -31,3 +31,16 @@
 (= (last (sort (rest (reverse [2 5 4 1 3 6]))))
   (-> [2 5 4 1 3 6] (reverse) (rest) (sort) (last))
    5)
+
+
+(defn checkPali [x]
+   (if (= (class x) clojure.lang.PersistentVector)
+      (= first last)
+      (= (map str (reverse (str x))) (map str x))))
+
+(checkPali [:foo :bar :foo])
+
+
+(defn dbl [x]
+  (for [x [%]])
+     (cons [x] [x]))
