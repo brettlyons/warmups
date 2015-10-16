@@ -41,6 +41,7 @@
 (checkPali [:foo :bar :foo])
 
 
-(defn dbl [x]
-  (for [x [%]])
-     (cons [x] [x]))
+(defn dupe [x]
+  (for [y x]))
+
+(dupe '(1 2 3 4))
