@@ -42,6 +42,6 @@
 
 
 (defn dupe [x]
-  (for [y x]))
+  (map #(repeat 2 %) x))
 
 (dupe '(1 2 3 4))
