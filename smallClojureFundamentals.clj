@@ -42,6 +42,32 @@
 
 
 (defn dupe [x]
-  (map #(repeat 2 %) x))
+  (flatten (map (fn [y] (repeat 2 y)) x)))
 
 (dupe '(1 2 3 4))
+
+(fn [x] (flatten (map (fn [y] (repeat 2 y)) x)))
+
+(defn dub [x]
+  (repeat 2 x))
+
+(defn otherdupe [g]
+  (reduce
+   (fn [r x] conj r (repeat 2 x))
+     []
+     g)))
+
+(defn fordupe [x]
+  (let [accum []]
+    (for [y x]
+      (cons accum (repeat 2 y)))
+  accum))
+
+
+(dub [1 2 3])
+
+(fordupe [[1 2] [3 4]])
+
+(fordupe [1 2 3])
+
+
