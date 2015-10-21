@@ -71,3 +71,16 @@
 (fordupe [1 2 3])
 
 
+(defn highest-rank
+  [data]
+  (key (apply max-key val (frequencies data))))
+
+
+(highest-rank [3 2 3 2 1 1 1 1 1 1])
+
+
+(defn somefunc [coll]
+  (let [gp (group-by identity coll)]
+    (zipmap (keys gp) (map #(count (second %)) gp))))
+
+
