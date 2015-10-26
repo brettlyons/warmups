@@ -83,4 +83,13 @@
   (let [gp (group-by identity coll)]
     (zipmap (keys gp) (map #(count (second %)) gp))))
 
+(defn compress [somecol]
+  (reduce (fn [total ele]
+            (println (last total))
+            (if (not= (last total) ele)
+              total
+              (conj total ele)))
+          [somecol]))
+(compress [1 1 2 2 2 3 4 1 5 2 3 4])
 
+(apply str (compress "leeerroooy"))
