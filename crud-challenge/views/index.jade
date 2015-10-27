@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p
+  if langs
+    ul
+    for lang in langs
+        li a(href= #{lang._id})
+        ul
+          li= lang.runtimeEnv
+          li= lang.family
+          li= lang.comments
+  p
+  a(href='/proglang') An Index of Some Programming Languages
+    
