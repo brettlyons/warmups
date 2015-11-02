@@ -93,3 +93,16 @@
 (compress [1 1 2 2 2 3 4 1 5 2 3 4])
 
 (apply str (compress "leeerroooy"))
+
+;; testing something else
+(def test-address
+  {:street-address "123 Test Lane"
+   :city "Testerville"
+   :state "TX"})
+
+(let [{street-address :street-address, city :city, state :state} test-address]
+test-address (str street-address " " city " " state))
+
+(let [{:keys [street-address city state]} test-address] (str street-address " " city " " state))
+
+(["Test" "Testerson"] test-address)
