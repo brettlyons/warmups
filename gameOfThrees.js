@@ -32,5 +32,3 @@ var f = gameOfThrees(31337357);
 //   f = f();
 // }
 // TCE unnecessary in this case, but maybe essential w/ larger numbers
-
-
