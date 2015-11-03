@@ -24,7 +24,9 @@ function gameOfThrees(n) {
 
 
 // var f = gameOfThrees(100);
-var f = gameOfThrees(31337357);
+// var f = gameOfThrees(31337357);
+
+gameOfThrees(31337357)
 
 // var f = gameOfThrees(-21);
 
