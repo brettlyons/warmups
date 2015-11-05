@@ -3,6 +3,13 @@ function center(length) {
   return (length + 1) / 2;
 }
 
+const directionMap = { 'right': [1,0],
+                       'up': [0, 1],
+                       'left': [-1, 0],
+                       'down': [0, -1]
+                     }
+// maybe rename right, up left and down to something else, like 0-3 in order to rotate via %4
+
 function Coordinates(x, y) {
   const that = this;
   this.x = x;
