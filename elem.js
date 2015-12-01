@@ -16,6 +16,7 @@ var include = function(array, target) {
 var a = [1,2,3,4,5];
 var b = [1, [2, 3]];
 var c = [1, {a: 1}];
+
 console.log('true ?>> ' + include(a, 3)); //true
 console.log('false ?>> ' + include(a, 7)); //false
 console.log('false ?>> ' + include(a, '3')); //false
