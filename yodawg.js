@@ -1,12 +1,9 @@
 function whattheoohhhsh(x) {
   console.log('Yo dawg, I heard ');
-
   function nope() {
     console.log('That your functions ');
-
     function nopenope() {
       console.log('like functions. ');
-
       function nope() {
         console.log('So I added some ');
 
