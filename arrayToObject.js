@@ -12,7 +12,8 @@ function bookData(arrayOfArrays) {
   function go(array, output) {
     if(array.length == 0) { return output; } 
 
-    // last element of head of list where the type of the head is an array 
+
+
     output[array[0][array[0].length - 1]] = bookDataArrayToObject(array[0]);
 
     return function() { return go(array.slice(1), output); };
