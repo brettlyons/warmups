@@ -14,4 +14,3 @@
     (if (and (= firstmap secondmap) (< awayby 2))
       true
       (< (+ awayby (count (clojure.set/difference firstmap secondmap))) 2))))
-
