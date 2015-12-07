@@ -11,7 +11,7 @@
 (defn oneAway [str1 str2]
   (let [firstmap (into #{} str1) secondmap (into #{} str2)
         awayby (abs (- (count str1) (count str2)))]
-    (if (and (= firstmap secondmap) (= awayby 1))
+    (if (and (= firstmap secondmap) (< awayby 2))
       true
       (< (+ awayby (count (clojure.set/difference firstmap secondmap))) 2))))
 
