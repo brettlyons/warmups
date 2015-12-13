@@ -1,16 +1,18 @@
 (ns oneEditAway
   (require [clojure.test :as test]))
 
-(test/is (= (oneAway "helo" "hello") true))
-(test/is (= (oneAway "helo" "halo") true))
-(test/is (= (oneAway "hello" "halo") false))
-(test/is (= (oneAway "hello" "germs") false))
+(test/is (= (oneAway "pale" "ple") true))
+(test/is (= (oneAway "pales" "pale") true))
+(test/is (= (oneAway "pale" "bale") true))
+(test/is (= (oneAway "pale" "bake") false))
+;(test/is (= (oneAway "ehlo" "hello") false))
 
 (defn abs [n] (max n (- n)))
 
 (defn oneAway [str1 str2]
-  (let [firstmap (into #{} str1) secondmap (into #{} str2)
+  (let [firstset (into #{} str1) secondset (into #{} str2)
         awayby (abs (- (count str1) (count str2)))]
-    (if (and (= firstmap secondmap) (< awayby 2))
+;    (println awayby firstset secondset (clojure.set/difference firstset secondset))
+    (if (and (= firstset secondset) (< awayby 2))
       true
-      (< (+ awayby (count (clojure.set/difference firstmap secondmap))) 2))))
+      (< (count (clojure.set/difference firstset secondset)) 2))))
