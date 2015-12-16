@@ -6,6 +6,8 @@ var fibonacci = function(n, cache) {
   return cache[n];
 };
 
+console.log(fibonacci(10));
+
 // var memCache = {};
 // var fibonacci = function(n) {
 // 	if (memCache[n]) return memCache[n];
