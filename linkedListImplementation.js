@@ -10,17 +10,10 @@ function LinkedList(head) {
     }
   }
   this.head = head; // head better be a node, else LinkedList.length() is f'd.
-  //that = this;
-  //return {
-  //setHead: function (head) {
-  //that.head = head;
-  //}
-  //}
-
 }
 
 LinkedList.prototype.pop = function() {
-  tmpHead = this.head;
+  var tmpHead = this.head;
   this.head = this.head.next;
   return tmpHead.data;
 }
@@ -55,14 +48,14 @@ LinkedList.prototype.reverse = function() {
   var list = new LinkedList(this);
   var tmpList = new LinkedList();
   while (list.head.next) {
-    tmpList.push(list.pop())
+    tmpList.push(list.pop());
   }
   tmpList.push(list.pop());
   return tmpList;
 }
 
 console.log(myFreshList.reverse());
-console.log('oOOoo', myFreshList)  // it used to eat the list!
+console.log('oOOoo', myFreshList);  // it used to eat the list!
 
 LinkedList.prototype.insertAtIndex = function(node, index) {
   if (index == 0) {
@@ -78,12 +71,12 @@ LinkedList.prototype.insertAtIndex = function(node, index) {
       return;
     }
     currNode = currNode.next;
-    return go(counter + 1, currNode.next)
+    return go(counter + 1, currNode.next);
   }
   return go(0, currentNode);
 
-}
-var kazerp = new Node('Nonth', null)
+};
+var kazerp = new Node('Nonth', null);
 myFreshList.insertAtIndex(kazerp, 1);
 console.log('....', myFreshList);
 
