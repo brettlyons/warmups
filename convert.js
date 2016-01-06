@@ -15,7 +15,7 @@ var convert = R.curry(function (conversionFactor, x) {
 var convertFtToInches = convert(12);
 var convertInchesToFt = convert(1/12);
 
-// fyi, js lacks the precision to do this correctly 
+// afaict js lacks the precision to do this correctly 
 var gramsCarbonToMol = convert(1/12.33); 
 
 var molarMassOfNa = convert(22.989);
