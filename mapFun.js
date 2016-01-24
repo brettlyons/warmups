@@ -3,15 +3,15 @@
 // and map over the *functions* for each array
 
 
-const sum = function (array) {
+var sum = function (array) {
   return array.reduce(function (x, y) { return x + y; });
 };
 
-const count = function (array) {
+var count = function (array) {
   return array.length;
 };
 
-const avg = function (array) {
+var avg = function (array) {
   return sum(array) / count(array);
 };
 
