@@ -1,7 +1,5 @@
-// so write three functions, sum, average and count
-// then have some test arrays of numbers
-// and map over the *functions* for each array
-
+// write a function that maps over a series of functions,
+// returning the result of each one.
 
 var sum = function (array) {
   return array.reduce(function (x, y) { return x + y; });
