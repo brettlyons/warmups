@@ -17,7 +17,10 @@
 (dotimes [n 5]
   (println (m-fib n)))
 
-;; (defn fiblist [n]
-;;   (reduce #(conj % (+ %2 (last %))) [1 1]))
+(defn fiblist [n & coll]
+  (let [coll (or coll '(1 1))]
+    (if (= (count coll) n) 
+      (reverse coll)
+      (recur n (cons (+ (first coll) (second coll)) coll)))))
 
-;; (println (fiblist 2))
+(println (fiblist 10))
