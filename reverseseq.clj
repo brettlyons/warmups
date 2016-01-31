@@ -1,4 +1,4 @@
-;; (= (__ [1 2 3 4 5]) [5 4 3 2 1])
+(ns rev-a-seq-4clojure)
 
 (defn rev [seq & tot]
   (let [x (first seq) xs (rest seq) total (or tot [])]
