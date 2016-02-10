@@ -20,7 +20,7 @@ var fnSequence = [sum, count, avg];
 
 function stats (arrayOfNumbers) {
   return fnSequence.map(function ( fn ) {
-    return (fn(arrayOfNumbers));
+    return fn(arrayOfNumbers);
   });
 }
 
