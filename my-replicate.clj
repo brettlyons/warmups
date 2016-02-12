@@ -1,9 +1,14 @@
 (ns my-replicate)
 
+;; (defn my-replicate
+;;   [sequ rep-count & accum]
+;;   (if (empty? sequ)
+;;     (remove nil? (flatten accum))
+;;     (recur (rest sequ) rep-count (cons accum (repeat rep-count (first sequ))))))
+
 (defn my-replicate
-  [sequ rep-count & accum]
-  (if (empty? sequ)
-    (remove nil? (flatten accum))
-    (recur (rest sequ) rep-count (cons accum (repeat rep-count (first sequ))))))
+  [sequ rep-count]
+  (reduce (fn [accum current]
+            (cons accum (repeat rep-count current))) sequ))
 
 (println (my-replicate [:a :b] 3))
