@@ -12,3 +12,4 @@
             (cons accum (repeat rep-count current))) sequ))
 
 (println (my-replicate [:a :b] 3))
+(println (my-replicate [[1 2] [3 4]] 4))
