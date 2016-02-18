@@ -5,7 +5,7 @@
   (if (and (some true? args)
            (some false? args))
     true
-    false))
+    false)) ;; using the if prevents test fail on nil-pun
 
 (println (my-half-true false true false)) ;; true 
 (println (my-half-true true true true)) ;; false
