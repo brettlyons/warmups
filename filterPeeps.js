@@ -1,12 +1,15 @@
 // configureIsBad :: Property -> ( Person -> Boolean)
 function configureIsBad ( field ) {
   return function ( person ) {
-    return person[field] == false || person[field] == undefined || person[field] == null;
+    return person[field] == false || person[field] == undefined || person[field] == null || person == 0;
   };
 }  // not actually necessary -- But soooo reusable!
 
 // isBadName :: Person -> Boolean
 const isBadName = configureIsBad ( 'name' ); // I hear null checking is really a thing. 
+
+// isBadAge :: Person -> Boolean
+const isBadAge = configureIsBad( 'age' );
 
 // removeBadPeople :: [Person] -> [Person]
 function removeBadPeople ( people ) {
