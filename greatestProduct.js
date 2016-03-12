@@ -10,7 +10,7 @@ function greatestProductOfPairs(array) {
   var mult = function(x, y) {
     count++;
     return x * y;
-  }
+  };
 
   var result = -Infinity;
   for (var i = 0 ; i < array.length ; i++) {

@@ -8,6 +8,6 @@ function charCounts(string) {
     return storageObj;  // base case
 
   }
-  return go({}, string) //first call/invocation of go
+  return go({}, string); //first call/invocation of go
 }
 console.log(charCounts('This is a string!!!'));
