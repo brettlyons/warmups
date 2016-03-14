@@ -2,6 +2,7 @@ console.log(arraySum([1,2]));
 console.log(arraySum([1,2,3]));
 console.log(arraySum([1,2,[1,2]]));
 
+
 function arraySum(array) {
   function go(array, sum) {
     if (array.length == 0) { return sum;  }
