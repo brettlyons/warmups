@@ -41,9 +41,8 @@ var myObjectDemo = {
     defObject = 'An javascript object is a collection of property/value pairs.'
   }
 };
+console.log(myObjectDemo.getDef);
 
 // what is function/method ?
 // methods are properties of objects whose value is a function.
 // functions are sets of instructions defined seperately from invocation/execution.
-//
-

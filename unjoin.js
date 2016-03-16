@@ -12,7 +12,7 @@ const testData = [
 
 // function unjoin(dataArray) {
 //   dataArray.reduce(function(collection, current) {
-    
+
 //   });
 // }
 
