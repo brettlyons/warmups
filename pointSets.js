@@ -28,12 +28,12 @@ function lineFinder (points) {
 	var output = [];
 	// y2 - y1 / x2 - x1
 	var intermediateDataLines = [];
-	for(var i = 0; i < points.length ; i++) {
-  	for(var j = i; j < points.length; j++) {
-   		intermediateDataLines.push({
+  for(var i = 0; i < points.length ; i++) {
+    for(var j = i; j < points.length; j++) {
+      intermediateDataLines.push({
         x1: points[i][0],
         y1: points[i][1],
-      	x2: points[j][0],
+        x2: points[j][0],
         y2: points[j][1],
         m: getSlope(points[i], points[j])
       });
