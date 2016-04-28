@@ -1,7 +1,7 @@
 defmodule FizzbuzzModule do
   @moduledoc """
   FizzBizz as suggested by Dave Thomas in his book "Programming Elixir"
-  using pattern matching and not conditionals.
+  using pattern matching, no conditionals.
   """
 
   def fizzbuzz(0, 0, _) do
@@ -20,20 +20,16 @@ defmodule FizzbuzzModule do
     n
   end
 
-  def do_fizzbuzz(_, 0) do
+  def do_fizzbuzz(_, 0) do # end on 0
     IO.puts(" THE END ")
   end
 
   def do_fizzbuzz(n, ending) do
     IO.puts(fizzbuzz(rem(n,3), rem(n,5), n))
-    do_fizzbuzz(n+1, ending-1) # end on 0
+    do_fizzbuzz(n+1, ending-1)
   end
 
-  def do_fizzbuzz() do
+  def do_fizzbuzz() do # this is starting place.
     do_fizzbuzz(1, 100)
-  end
-
-  def start_fizzbuzz() do
-    do_fizzbuzz()
   end
 end
