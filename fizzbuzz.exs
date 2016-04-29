@@ -29,7 +29,11 @@ defmodule FizzbuzzModule do
     do_fizzbuzz(n+1, ending-1)
   end
 
-  def do_fizzbuzz() do # this is starting place.
+  def do_fizzbuzz(ending) do # if given 1 val, use it as ending
+    do_fizzbuzz(1, ending)
+  end
+
+  def do_fizzbuzz() do # start if called without vals.
     do_fizzbuzz(1, 100)
   end
 end
