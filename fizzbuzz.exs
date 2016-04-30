@@ -4,21 +4,10 @@ defmodule FizzbuzzModule do
   using pattern matching, no conditionals.
   """
 
-  def fizzbuzz(0, 0, _) do
-    "FizzBuzz"
-  end
-
-  def fizzbuzz(0, _, _) do
-    "Fizz"
-  end
-
-  def fizzbuzz(_, 0, _) do
-    "Buzz"
-  end
-
-  def fizzbuzz(_, _, n) do
-    n
-  end
+  def fizzbuzz(0, 0, _), do: "FizzBuzz"
+  def fizzbuzz(0, _, _), do: "Fizz"
+  def fizzbuzz(_, 0, _), do: "Buzz"
+  def fizzbuzz(_, _, n), do: n
 
   def do_fizzbuzz(_, 0) do # end on 0
     IO.puts(" THE END ")
@@ -33,7 +22,7 @@ defmodule FizzbuzzModule do
     do_fizzbuzz(1, ending)
   end
 
-  def do_fizzbuzz() do # start if called without vals.
+  def do_fizzbuzz() do # start at 1 if called without vals.
     do_fizzbuzz(1, 100)
   end
 end
