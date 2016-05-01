@@ -4,6 +4,13 @@ defmodule FizzbuzzModule do
   using pattern matching, no conditionals.
   """
 
+  #fizzbuzz_two = fn 0, 0, _ -> "FizzBuzz"
+  #0, _, _ -> "Fizz"
+  #_, 0, _ -> "Buzz"
+  #_, _, n -> n
+  #end
+  # doesn't quite work -- maybe poor fn description?
+
   def fizzbuzz(0, 0, _), do: "FizzBuzz"
   def fizzbuzz(0, _, _), do: "Fizz"
   def fizzbuzz(_, 0, _), do: "Buzz"
@@ -15,6 +22,7 @@ defmodule FizzbuzzModule do
 
   def do_fizzbuzz(n, ending) do
     IO.puts(fizzbuzz(rem(n,3), rem(n,5), n))
+    #IO.puts(fizzbuzz_two(rem(n,3), rem(n,5), n))
     do_fizzbuzz(n+1, ending-1)
   end
 
