@@ -15,7 +15,6 @@ return true;
 }
 // for Scramblies
 
-
 // okay here's an idea . . .
 // if the given letter from str2 exists in string1, push it to an array.
 // given that, if a given letter *already exists* in the array,
@@ -45,7 +44,6 @@ function scramble(str1, str2) {
   if (str1.search(str2) != -1)  { return true; }
   return false;
 } */
-
 
 function scramble(str1, str2) {
 var arr1 = str1.split('');
