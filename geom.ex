@@ -24,7 +24,6 @@ defmodule Geom do
     end
   end
 
-
   defp area(_, _, _) do # should let it fail... but aren't.
     0
   end
