@@ -15,29 +15,32 @@ var arr = [68, 74, 99, 45, 83, 95];
 //   });
 // }
 
+function convertToGrade(array) {
+    return array.map(function(element) {
+        return (element < 60) ? 'F' :
+            (element < 70) ? 'D' :
+            (element < 80) ? 'C' :
+            (element < 90) ? 'B' :
+            (element < 101) ? 'A' :
+            'Invalid input';
+    });
+}
+
+
+function convertToGrade(array) {
+    function go(array, output) {
+        if (array.length == 0) {
+            return output;
+        }
+        output.push((array[0] < 60) ? 'F' :
+            (array[0] < 70) ? 'D' :
+            (array[0] < 80) ? 'C' :
+            (array[0] < 90) ? 'B' :
+            (array[0] < 101) ? 'A' :
+            'Invalid input');
+        return go(array.slice(1), output);
+    }
+    return go(array, []);
+}
+
 console.log(convertToGrade(arr)); // => [ D, C, A, F, B, A ]
-
-function convertToGrade(array) {
-  return array.map(function(element) {
-    return (element < 60) ? 'F'
-    : (element < 70) ? 'D'
-    : (element < 80) ? 'C'
-    : (element < 90) ? 'B'
-    : (element < 101) ? 'A'
-    : 'Invalid input';
-  });
-}
-
-function convertToGrade(array) {
-  function go(array, output) {
-    if (array.length == 0) { return output;}
-    output.push((array[0] < 60) ? 'F'
-    : (array[0] < 70) ? 'D'
-    : (array[0] < 80) ? 'C'
-    : (array[0] < 90) ? 'B'
-    : (array[0] < 101) ? 'A'
-    : 'Invalid input');
-    return go(array.slice(1), output);
-  }
-  return go(array, []);
-}

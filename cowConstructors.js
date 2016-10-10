@@ -3,7 +3,7 @@ function Cow(name, num) {
   this.num = num;
   this.moo = function() {
     return String('moooooooo I\'m ' + this.name + ' moooooooo!!!!!!');
-  }
+  };
 }
 
 function CowFarm(cows) {
@@ -13,7 +13,7 @@ function CowFarm(cows) {
       output += cows[ cow ].moo() + '\n';
     }
     return output.slice(0, -1); // gotta slice off the extra \n
-  }
+  };
 
   //this.mooInOrderRec = function() {
   //function go(cows)  {
@@ -26,6 +26,7 @@ function CowFarm(cows) {
   //return go(cows);
   //}
 }
+
 
 //1. construct cows that can moo
 var bessy = new Cow('Bessy', 10);
