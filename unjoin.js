@@ -1,7 +1,7 @@
 const testData = [
   {kidId: 1, kidName: 'Ed', toyName: 'Teddy Bear'},
   {kidId: 1, kidName: 'Ed', toyName: 'Car'},
-  {kidId: 2, kidName: 'Su', toyName: 'Teddy Bear'},
+  {kidId: 2, kidName: 'Stu', toyName: 'Teddy Bear'},
 ];
 
 // testData listed above should return this
@@ -26,10 +26,10 @@ function unjoin(dataArray) {
   function go(remainingArray, collection, idCache) {
     if (remainingArray.length === 0) { return collection; }
 
-    if(!idCache[remainingArray[0].kidId]) { idCache[remainingArray[0].kidId] = true }
+      if(!idCache[remainingArray[0].kidId]) { idCache[remainingArray[0].kidId] = true; } 
 
     if(idCache[remainingArray[0].kidId]) {
-      collection[collection.indexOf(idCache[remainingArray[0].kidId])]
+        collection[collection.indexOf(idCache[remainingArray[0].kidId])]; 
     }
     return(remainingArray.slice(1), collection, idCache);
   }
