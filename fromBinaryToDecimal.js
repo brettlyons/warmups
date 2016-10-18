@@ -21,10 +21,10 @@ console.log('3 ? ', toDecimal('0011')); // 3
 console.log(' error . . null ? ', toDecimal('001a')); // contains characters other than 0 or 1 not a binary string
 
 function removeDupes(string) {
-  return string.replace(/[^\w\s]|(.)(?=\1)/g, '');
+    return string.replace(/[^\w\s]|(.)(?=\1)/g, '');
 } // credit to xanatos on Stack Overflow
 function insensitiveRemoveDupes(string) {
-  return string.replace(/[^\w\s]|(.)(?=\1)/gi, '')
+    return string.replace(/[^\w\s]|(.)(?=\1)/gi, '');
 } // difference is at /gi
 
 console.log(removeDupes('aaaabbbb'));

@@ -23,7 +23,6 @@ var secondList = [4,5,6];
 
 console.log(zip([1,2,3], [4, 5, 6]));
 
-function
 function zip(xs, ys) {
   function go(xs, ys, output) {
     if (xs.length == 0 || ys.length == 0) { return output;}

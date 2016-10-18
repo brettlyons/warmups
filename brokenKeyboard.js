@@ -36,24 +36,26 @@ var listToLog = function (list) {
     console.log(remainingList);
     return go(remainingList.next);
   }
-  f = function () { return go(list); }
+    f = function () { return go(list); };
   while(typeof f == 'function') {
     f = f();
   }
   return f;
-}
+};
+
 
 var LLFromArray = function (array) {  
   function go(remainingArray, theList) {
     if(remainingArray.length == 0) { return theList; }
-    return function () { return go(remainingArray, new LinkedList(remainingArray.pop(), theList)); }
+      return function () { return go(remainingArray, new LinkedList(remainingArray.pop(), theList)); };
   };
-  var f = function () { return go(array, new LinkedList(array[0], null));}
+    var f = function () { return go(array, new LinkedList(array[0], null));};
   while(typeof f == 'function') {
     f = f();
   }
   return f;
-}
+};
+
 function calcWordsLL (availableLetters) {
   fs.readFile('enable1.txt', 'utf-8', function(err, data) {
     wordList = new LinkedList (data.split('\r\n')[0], null);
@@ -61,7 +63,7 @@ function calcWordsLL (availableLetters) {
     var wordList = LLFromArray(lines);
     console.log(wordList);
   });
-  
+
 }
 // calcWordsLL('some');
 
