@@ -26,6 +26,3 @@ function stats (arrayOfNumbers) {
 
 console.log(stats(testSequence));
 console.log(stats(testSequence2), " -- Should Equal: [15, 5, 3] ");
-
-
-
