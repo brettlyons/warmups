@@ -1,17 +1,24 @@
 // Trying to understand continuation passing style.
-
-function pyth(x, y) {
-    return function(x2) {
-        return function(y2) {
-            console.log(y2);
-            return function (x2py) {
-                return x2py;
-           }.call(Math.sqrt(y2));
-        }.call(y * y);
-    }.call(x * x);
+function add (num1, num2) {
+    return function (andThen) { andThen(num1 + num2); };
 }
-// doesn't work currently.
-// console.log(pyth(2, 2));
 
+function square (num) {
+    return function (andThen) { andThen(num * num); };
+}
+
+function pyth_cps (x, y) {
+    return function (andThen) {
+        square(x)(function (x_squared) {
+            square(y)(function (y_squared) {
+                add(x_squared, y_squared)(function (added_squares) {
+                    return andThen(added_squares);
+                });
+            });
+        });
+    };
+}
+
+pyth_cps(3, 4)(console.log);
 
 
