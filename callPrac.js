@@ -42,6 +42,6 @@ Dog.prototype = Object.create(Mammal.prototype);
 // the difference between constructors
 
 var becky = new Dog('becky', 8, 'Newfoundland');
-console.log(Dog.prototype.constructor)
+console.log(Dog.prototype.constructor);
 console.log(typeof becky);
 console.log(becky);
