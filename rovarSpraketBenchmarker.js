@@ -4,21 +4,21 @@ var testString = "Bacon ipsum dolor amet ham hock pork chop kielbasa, nisi chuck
 // I copy-pasted this ipsum 10 times to increase the benchmark size.
 
 function rovarSpraket(string) {
-  var VOWEL = new RegExp(/[aeiou ]+/i); // First usage of const in JS ever!
-  //const VOWEL = { a: true, A: true, e: true, E: true, i: true, I: true,
-                  //o: true, O: true, u: true, U: true, ' ': true };
-  return string.split('').map(function(element) {
-    if(VOWEL.test(element)) {
-    //if (VOWEL[element]) {
-      return element;
-    }
-    return element + 'o' + element;
-  }).join("");
+    var VOWEL = new RegExp(/[aeiou ]+/i); // First usage of const in JS ever!
+    //const VOWEL = { a: true, A: true, e: true, E: true, i: true, I: true,
+    //o: true, O: true, u: true, U: true, ' ': true };
+    return string.split('').map(function(element) {
+        if (VOWEL.test(element)) {
+            //if (VOWEL[element]) {
+            return element;
+        }
+        return element + 'o' + element;
+    }).join("");
 }
 
 console.time(label);
-for (var i = 10000; i > 0 ; i--) {
-  console.log(rovarSpraket(testString));
+for (var i = 10000; i > 0; i--) {
+    console.log(rovarSpraket(testString));
 }
 console.log("One paragraph, bacon ipsum, " + label);
 console.timeEnd(label);
@@ -41,8 +41,6 @@ function rovarSpraket(string) {
 //absurd linecount optimization / speed de-optimization version
 //function rovarSpraket(string) {
 //return string.split('').map(function(element) {
-    //return (new RegExp(/[aeiou ]+/i).test(element)) ? element
-      //: element + 'o' + element; }).join("");
+//return (new RegExp(/[aeiou ]+/i).test(element)) ? element
+//: element + 'o' + element; }).join("");
 //}
-
-
