@@ -1,5 +1,6 @@
 //function that determines if everything in it is a number.
 
+
 /*
  *function isNumber( input ) {
  *  var canary = true;
