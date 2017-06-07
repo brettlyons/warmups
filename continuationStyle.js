@@ -9,13 +9,16 @@ function square (num) {
 
 function pyth_cps (x, y) {
     return function (andThen) {
-        square(x)(function (x_squared) {
-            square(y)(function (y_squared) {
-                add(x_squared, y_squared)(function (added_squares) {
-                    return andThen(added_squares);
-                });
+        square(x)(function (x_squared)
+                  {
+        square(y)(function (y_squared)
+                      {
+        add(x_squared, y_squared)(
+        function (added_squares) {
+        return andThen(added_squares);
+                            });
+                    });
             });
-        });
     };
 }
 
