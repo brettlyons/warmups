@@ -9,10 +9,6 @@
 //}
 // range ( 257 ) ;
 
-function somename(sometext) {
-
-}
-
 var xs = new Array();
 function range(start, end) {
   if (start == end) { return xs }
