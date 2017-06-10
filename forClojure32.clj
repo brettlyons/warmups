@@ -21,6 +21,5 @@
   "the key was to use apply"
   )
 
-
 (dupe [1 2 3])
 (dupe [[1 2][3 4]])

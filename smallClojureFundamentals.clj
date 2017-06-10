@@ -5,12 +5,12 @@
     (str "undefined")
     (str (/ (- (first (rest v)) (last v)) (- (first v) (first (rest (rest v))))))))
 
-
 (ns waiting-room)
 
 (comment
   small koans from a relatively well known code training website.
 )
+
 (defn last-chair [n]
 	(- n  1)
 )
