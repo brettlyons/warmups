@@ -24,7 +24,7 @@
 var firstTestPiles = [[1,1,1],
                       [2,1,3],
                       [1,4,1]]
-
+// doesn't work iirc.
 function placeLogs(pilesArrays, remainingLogs, secondToLowest) {
   var i = 0;
   var j = 0;
