@@ -20,10 +20,9 @@ function greatestProductOfPairs(array) {
       }
     }
   }
-  console.log('Multiply is run: ', count, ' times'); // side effect.
+  console.log('Multiply is run: ', count, ' times');
   return result;
-} // impure function, side effects to console.
-//removeing that side effect makes it pure.
+}
 
 console.log(greatestProductOfPairs([2,3,4,-5,92,100])); // 9200
 console.log(greatestProductOfPairs([-2,3,-4,-5,-92,-100])); // 9200
