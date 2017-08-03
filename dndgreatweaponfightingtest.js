@@ -2,6 +2,9 @@ function attackRoll(dice_size) {
     return Math.floor(Math.random() * dice_size) + 1;
 }
 
+// re-write suggestion -- decouple things at the bottom.
+// generate non-gwf info too for comparison.
+
 function generateRollset(dice_size, size) {
     var rolls = Array(size);
     for(var i = 0; i < size; i++) {
@@ -42,8 +45,8 @@ function generateFullInfo(dice_max, dmg_rolls_per_encounter) {
     console.log(rollset_total.reduce(sum) / 10000);
 
 }
+
 generateFullInfo(6, 10);
 generateFullInfo(12, 5);
 generateFullInfo(10, 5);
-
-
+generateFullInfo(8, 5);
