@@ -13,10 +13,6 @@ function generateRollset(dice_size, size) {
     return rolls;
 }
 
-function sum(a, b) {
-    return a + b;
-}
-
 function reRollLow(dice_size, roll) {
     if(roll < 3) {
         return attackRoll(dice_size);
@@ -26,8 +22,12 @@ function reRollLow(dice_size, roll) {
     }
 }
 
+function sum(a, b) {
+    return a + b;
+}
+
 function varianceTrial(dice_size, rolls) {
-    var reRollLowOne = function(roll) { return reRollLow(dice_size, roll); };
+    const reRollLowOne = function(roll) { return reRollLow(dice_size, roll); };
     return rolls.map(reRollLowOne).reduce(sum) - rolls.reduce(sum);
 }
 
@@ -43,7 +43,6 @@ function generateFullInfo(dice_max, dmg_rolls_per_encounter) {
     console.log((varianceList.reduce(sum) / 10000));
     console.log("average damage per encounter with d" + dice_max);
     console.log(rollset_total.reduce(sum) / 10000);
-
 }
 
 generateFullInfo(6, 10);

@@ -7,7 +7,7 @@ fn main() {
     reader.read_line(&mut quantity).unwrap();
 
     let mut tmp_numbers = String::new();
-    reader.read_line(&mut tmp_numbers);
+    let _ = reader.read_line(&mut tmp_numbers);
 
     let mut numbers: Vec<i32> = tmp_numbers.split_whitespace()
         .map(|s| s.parse().unwrap())

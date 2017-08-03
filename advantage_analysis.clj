@@ -38,13 +38,19 @@
            (- total 1))
         (Math/sqrt))))
 
-(defn print-rolls [roll-label mean median std-dev]
-  (println roll-label)
-  (println "\n\t Mean: " mean
-           "\n\t Median: " median
-           "\n\t Standard deviation: " std-dev))
+(defn print-rolls [rollset]
+  (println (:roll-label rollset))
+  (println "\n\t Mean: " (:mean rollset)
+           "\n\t Median: " (:median rollset)
+           "\n\t Standard deviation: " (:std-dev rollset)))
 
 (defn generate-data []
   (let [std-rolls (generate-thousand-rolls rolld20) adv-rolls (generate-thousand-rolls adv-rolld20)]
-    (print-rolls "Standard Rolls: " (+ 0.0 (mean std-rolls)) (median std-rolls) (standard-deviation std-rolls))
-    (print-rolls "Advantaged Rolls: " (+ 0.0 (mean adv-rolls)) (median adv-rolls) (standard-deviation adv-rolls))))
+    (print-rolls {:roll-label "Standard Rolls: "
+                  :mean (+ 0.0 (mean std-rolls))
+                  :median (median std-rolls)
+                  :std-dev (standard-deviation std-rolls)})
+    (print-rolls {:roll-label "Advantaged Rolls: "
+                  :mean (+ 0.0 (mean adv-rolls))
+                  :median (median adv-rolls)
+                  :std-dev (standard-deviation adv-rolls))))

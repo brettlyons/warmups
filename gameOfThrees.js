@@ -4,22 +4,22 @@
 // game ends at 1
 
 function gameOfThrees(n) {
-  const DIVISOR = 3;
-  
-  if (n === 1 || n === -1) {
-    console.log(n);
-    return n
-  }
-  if(n % DIVISOR === 0) {
-    console.log(n + " 0")
-    return gameOfThrees(n / DIVISOR);
-  }
-  if((n + 1) % DIVISOR == 0) {
-    console.log(n + " 1")
-    return gameOfThrees((n+1) / DIVISOR);
-  }
-  console.log(n + " -1")
-  return gameOfThrees((n-1) / DIVISOR);
+    const DIVISOR = 3;
+
+    if (n === 1 || n === -1) {
+        console.log(n);
+        return n;
+    }
+    if(n % DIVISOR === 0) {
+        console.log(n + " 0");
+        return gameOfThrees(n / DIVISOR);
+    }
+    if((n + 1) % DIVISOR == 0) {
+        console.log(n + " 1");
+        return gameOfThrees((n+1) / DIVISOR);
+    }
+    console.log(n + " -1");
+    return gameOfThrees((n-1) / DIVISOR);
 }
 
 
